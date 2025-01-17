@@ -1,0 +1,117 @@
+
+.footer { background:#f5f5f5;  clear:both; color:#000; line-height:17px; position:relative;margin:0!important;}
+.footer .inner {width:1366px;overflow:hidden; position:relative; font-weight:400; text-align:center;font-size:12px; clear:both;}
+
+.inner { border-bottom:1px solid #e1e1e1; }
+.inner { overflow:hidden; padding:70px 0 70px 0; margin:0 auto;  }
+.inner .title { font-size:15px;font-weight:700; }
+.inner .title span { font-size:12px; font-weight:normal; color:#999; padding:0 0 0 8px }
+.inner .title span.more { float:right }
+.inner .title span.more a { color:#fff; background:#222; padding:2px 10px 3px;  border-radius:8px;-moz-border-radius:8px; -webkit-border-radius:8px; }
+.inner .title a { color:#888; font-weight:300; }
+
+/* 중간 고객센터 */
+.inner .cs {  overflow:hidden;  }
+.inner .cs ul { clear:both }
+.inner .cs .cs_left {text-align:left;padding:0 }
+.inner .cs .cs_left, .inner .cs .cs_right {vertical-align:top; display:inline-block; }
+.inner .cs .cs_info {position:relative;margin:12px 0 0; }
+.inner .cs .cs_info li { display:block; }
+.inner .cs .cs_info img {width:40px;height:40px;position:absolute;top:-8px;left:-44px;}
+.inner .cs .tel { font-weight:500; color:#000;   padding:3px 15px 15px 0; letter-spacing:0.05em; font-size:20px; }
+.inner .cs .tel_time { font-size:13px; font-weight:500;line-height:1.7; color:#000;}
+.inner .cs .tel_time span { font-weight:400 }
+
+.inner .cs .tel_time p { color:#888; padding:3px 0 0; }
+.inner .cs .tel_time img { padding:1px 0 0 0 }
+
+.inner .cs .cs_bbs { clear:both; height:70px; }
+.inner .cs .cs_bbs li { float:left; margin:0 3px 0 0; }
+.inner .cs .cs_bbs li a { font-size:12px; color:#666; display:block; padding:0 0 1px 0; line-height:30px; height:30px; text-align:center; width:90px; background:#fff; border:1px solid #ddd; }
+.inner .cs .cs_bbs li a:hover { background:#f5f5f5 }
+       
+.inner .cs .cs_right { text-align:left;margin:0 }
+.inner .cs .cs_right .account {margin-top:30px;}
+.inner .account li { line-height:1.8; }
+.inner .account li.right { margin:-16px 0 0 38px }
+.inner .account .info { display:flex;font-size:12px; vertical-align:top;}
+.inner .account .info .info_left {margin-right:30px;font-weight:500;}
+.inner .account .info p { padding:16px 0 0 }
+.inner .account .info select { width:187px; height:25px; clear:both; font-size:12px; color:#888;  background:#fff; border:1px solid #e1e1e1; }
+.inner .account .info .han {  display:inline-block; padding:2px 0 1px 0; vertical-align:top; line-height:1.5;   color:#222;  }
+.inner .account .info .num { display:inline-block; font-weight:400; padding:2px 0 0 3px; font-size:14px; letter-spacing:0; line-height:1.5; }
+.inner .account .info .name {display:inline-block; padding-top:12px; color:#222; }
+.inner .account .info .name strong { padding:0 3px 0 0; font-weight:300;  }
+
+/* SNS */
+.sns_zone { position:absolute; right:0; top:70px }
+.sns_zone li { float:left; margin:0 0 0 15px; }
+
+/* 회사정보 */
+.company_i { padding:35px 0 20px; font-weight:300; text-align:center; }
+.company_i .inner2  span { padding:0 7px 0 0 }
+.company_i .inner2 li { display:inline-block; color:#888; line-height:20px; padding:6px 0 20px; }
+.company_i .inner2 li a { color:#333; font-weight:300 }
+.company_i .inner2 li.logo {  padding:2px 10px 0 0 }
+.company_i .inner2 .info a { margin:0 0 0 5px; color:#777; background:#eee; padding:5px 15px  }
+.company_i .inner2 .info a:hover { color:#fff !important; background:#222; }
+
+/* PG */
+.company_pg {  display:inline-block;text-align:left;margin:0 165px;}
+.company_pg .inner2 {  margin:30px 0 0; font-size:12px; letter-spacing:-0.02em; }
+.company_pg .inner2 .info {display:flex;}
+.company_pg .inner2 .info .info_left {display:flex; margin-right:78px;}
+.company_pg .inner2 .info .info_left ul:first-child {margin-right:30px;}
+.company_pg .inner2 .info .info_left ul:first-child li {font-weight:500;}
+.company_pg .inner2 .info .info_right {display:flex;}
+.company_pg .inner2 .info .info_right ul:first-child {margin-right:30px;}
+.company_pg .inner2 .info .info_right ul:first-child li {font-weight:500;}
+.company_pg .inner2 .info img { padding:3px 5px 0 8px }
+.company_pg .inner2 li { color:#000; line-height:1.8; font-weight:400;}
+.company_pg .inner2 li a { color:#333 }
+.company_pg .inner2 li span { padding:0 5px; font-weight:300; }
+
+.pg { color:#000; clear:both; line-height:21px;  font-size:10px; }
+.pg img { margin:-1px 0 0 0; }
+.address { padding:22px 0 0 0; color:#000; clear:both; letter-spacing:1px; line-height:21px; font-size:10px; }
+.address .han { font-size:10px; letter-spacing:0px; }
+.address .ment { padding:0 0 0 13px; color:#000; font-size:10px; letter-spacing:0px; }
+.copyright { letter-spacing:1px; padding:10px 0 0; display:block;  color:#aaa; font-size:10px; }
+
+.utilMenu { display:block !important; padding:1px 10px 0 0 !important; clear:both; }
+.utilMenu a {  display:inline-block; background:#eee; padding:5px 15px; color:#777 !important;  font-weight:300   }
+.utilMenu a:hover { color:#fff !important; background:#222; }
+
+.cs_right_box {display: inline-block;}
+
+/* 반응형 CSS */
+@media screen and (max-width: 1365px) {
+    .footer .inner {width: 100%;padding:70px 30px;}
+    .company_pg {margin: 0 60px;}
+    .company_pg .inner2 .info .info_left {margin-right:30px;}
+}
+
+@media screen and (max-width: 1175px) {
+    .footer .inner {width: 100%;padding:70px 30px;}
+    .cs {display:flex;justify-content: space-between;align-items: center;}
+    .company_pg {display: block;margin: 0;}
+    .inner .cs .cs_right {display: block;margin-top:13px;padding-top: 13px; border-top: 1px solid #C7C7C7;}
+    .company_pg .inner2 .info {display:block;border-top: 1px solid #C7C7C7;padding-top:13px;}
+    .company_pg .title, .cs_right .title {display:none;}
+    .inner .cs .cs_right .account {margin-top:0;}
+    .cs_left {margin-top:30px;align-self: flex-start;}
+    .cs_left .title {margin-left:35px;font-size:21px;}
+    .inner .cs .cs_info img {top:-42px;left:-8px;}
+    .cs_right .info_left {width: 91px;}
+    .company_pg .inner2 .info .info_left ul:first-child li, .company_pg .inner2 .info .info_right ul:first-child li {width:92px;}
+}
+
+@media screen and (max-width: 600px) {
+    .info {font-size:10px!important;}
+    .cs_left .title {font-size:16px;margin-left:30px;}
+    .inner .cs .tel {font-size:15px;}
+    .cs_right_box {margin-left:5px;}
+    .company_pg .inner2 .info .info_left ul:first-child, .company_pg .inner2 .info .info_right ul:first-child  {margin-right:15px;}
+    .company_pg .inner2 .info .info_left ul:first-child li, .company_pg .inner2 .info .info_right ul:first-child li {width:76px;}
+    .cs_right .info_left {width: 61px;}
+}

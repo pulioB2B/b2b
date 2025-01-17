@@ -5,7 +5,6 @@ const Main = () => {
   const zoomContainerRef = useRef(null);
   const imgRef = useRef(null);
 
-  // 스로틀링 함수 구현
   const throttle = (func, delay) => {
     let lastCall = 0;
     return function (...args) {

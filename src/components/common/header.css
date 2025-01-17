@@ -1,0 +1,28 @@
+.header {position:fixed;top:0;width: 100%;padding:24px 0;background-color: transparent;transition: background-color 0.3s ease;z-index:500;}
+.header.scrolled {background-color: #fff;}
+.header_inner {width:1366px;margin:0 auto;display:flex;justify-content: space-between;align-items: center;box-sizing: border-box;}
+.header_left {display:flex;align-items: center;}
+.header_left .logo {background-image: url('/public/imgs/pulio_logo.svg');background-repeat: no-repeat;background-size: cover;background-color:transparent ;width:53px;height:19px;margin-right:110px;}
+.header_left ul {display:flex;align-items: center;}
+.header_left ul li {color: #180048;font-size: 15px;font-weight: 400;margin-right:60px;}
+.header_left ul li:last-child {margin-right:0;}
+.header_left ul li:hover {border-bottom:2px solid #180048;}
+.header_right ul {display:flex;align-items: center;}
+.header_right ul li {color: #000;font-size: 12px;font-weight: 400;margin-right:50px;}
+.header_right ul li:last-child {margin-right:0;}
+.header_right ul li:hover {border-bottom:1px solid #000;}
+
+/* 모바일 UI CSS */
+.menu_btn {display:none;background-image: url('/public/imgs/menu_mo.svg');background-repeat: no-repeat;background-size: cover;background-color:transparent ;width: 22px;height: 20px;}
+
+/* 반응형 CSS */
+@media screen and (max-width: 1365px) {
+    .header_inner {width: 100%; padding:0 30px; }
+    .header_left .logo {margin-right:60px;}
+}
+
+@media screen and (max-width: 850px) {
+    .menu_btn {display:block;}
+    .header_left ul {display:none;}
+    .header_right ul {display: none;}
+}
