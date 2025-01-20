@@ -2,7 +2,7 @@
 .header.scrolled {background-color: #fff;}
 .header_inner {width:1366px;margin:0 auto;display:flex;justify-content: space-between;align-items: center;box-sizing: border-box;}
 .header_left {display:flex;align-items: center;}
-.header_left .logo {background-image: url('/public/imgs/pulio_logo.svg');background-repeat: no-repeat;background-size: cover;background-color:transparent ;width:53px;height:19px;margin-right:110px;}
+.header_left .logo {background-image: url('/public/imgs/pulio_logo.svg');background-repeat: no-repeat;background-size: cover;background-color:transparent ;width:53px;height:19px;margin-right:110px;color:transparent;}
 .header_left ul {display:flex;align-items: center;}
 .header_left ul li {color: #180048;font-size: 15px;font-weight: 400;margin-right:60px;}
 .header_left ul li:last-child {margin-right:0;}

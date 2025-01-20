@@ -33,7 +33,7 @@ const Header = () => {
             <header className={`header ${scrolled ? 'scrolled' : ''}`}>
                 <div className="header_inner">
                     <div className="header_left">
-                    <Link to="/"><h1 className="logo"></h1></Link>
+                    <Link to="/"><h1 className="logo">로고</h1></Link>
                         <ul>
                             <li><Link to="/">단체선물</Link></li>
                             <li><Link to="/station">사업제휴</Link></li>

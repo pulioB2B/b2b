@@ -13,7 +13,7 @@ const Footer = () => {
                             </li>
                         </ul>
                         <ul className="cs_info">
-                            <img src="/imgs/cs_tell.svg" />
+                            <img src="/imgs/cs_tell.svg" alt=""/>
                             <li className="tel">
                                 1551-0879
                             </li>
