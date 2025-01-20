@@ -36,14 +36,14 @@ const Header = () => {
                     <Link to="/"><h1 className="logo">로고</h1></Link>
                         <ul>
                             <li><Link to="/">단체선물</Link></li>
-                            <li><Link to="/station">사업제휴</Link></li>
-                            <li><Link to="/">오피스</Link></li>
+                            <li><Link to="/">사업제휴</Link></li>
+                            <li><Link to="/station">오피스</Link></li>
                         </ul>
                     </div>
                     <div className="header_right">
                         <ul>
                             <li><Link to="/">상담받기</Link></li>
-                            <li><Link to="/station">견적문의</Link></li>
+                            <li><Link to="/">견적문의</Link></li>
                             <li><Link to="/">주문하기</Link></li>
                         </ul>
                         <div><button onClick={toggleMenu} className="menu_btn" type="button"></button></div>

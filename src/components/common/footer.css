@@ -114,4 +114,5 @@
     .company_pg .inner2 .info .info_left ul:first-child, .company_pg .inner2 .info .info_right ul:first-child  {margin-right:15px;}
     .company_pg .inner2 .info .info_left ul:first-child li, .company_pg .inner2 .info .info_right ul:first-child li {width:76px;}
     .cs_right .info_left {width: 61px;}
+    .footer .inner {width: 100%;padding:30px 20px 70px;}
 }

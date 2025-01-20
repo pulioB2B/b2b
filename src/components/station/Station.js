@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
-import './main.css';
+import './station.css';
 
-const Main = () => {
+const Station = () => {
   const zoomContainerRef = useRef(null);
   const imgRef = useRef(null);
 
@@ -432,4 +432,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Station;

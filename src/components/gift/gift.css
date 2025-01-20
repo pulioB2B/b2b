@@ -1,0 +1,14 @@
+
+/* 모바일 css */
+#gift_wraps {width:100%;}
+#gift_wraps .contents_imgBox {width:100%;}
+#gift_wraps .contents_imgBox img {width:100%;height:100%;object-fit:cover;vertical-align: top;}
+
+.slider_box {position:relative;background:#140335;padding-left:10px;overflow: hidden;}
+.review_slider li {width:90vw!important;margin-right:10px;}
+.review_slider li img {width:100%;height:100%;object-fit: cover;pointer-events: none;}
+
+.slick-prev:before {display:none;}
+
+.counsel_btn {position: fixed;bottom: 0;right: 0;width: 100%;background: linear-gradient(90deg, #2B00BC 0%, #2E0F6E 100%);z-index: 999999;height:64px;text-align: center;line-height:64px; }
+.counsel_btn a {color: #fff;font-size:18px;font-weight:400;line-height:25px;}
