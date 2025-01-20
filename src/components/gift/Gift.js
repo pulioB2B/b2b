@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import './gift.css';
 import ImgSlider from "../common/ImgSlider";
 
 const Gift = () => {
+    useEffect(() => {
+        const items = document.querySelectorAll(".item");
+    
+        const newObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              } else {
+                entry.target.classList.remove("visible");
+              }
+            });
+          },
+          { threshold: 0.1 } // 요소가 10% 보이면 트리거
+        );
+    
+        items.forEach((item) => newObserver.observe(item));
+    
+        // Cleanup function to remove the observer when the component is unmounted
+        return () => {
+          items.forEach((item) => newObserver.unobserve(item));
+        };
+      }, []);
 
     return (
         <>
@@ -25,7 +48,7 @@ const Gift = () => {
             </div>
 
             <div className="counsel_btn">
-                <Link to="https://puliob2bsales.recatch.cc/workflows/daboqndouz">1분만에 상담받기 &gt;</Link>
+                <Link to="https://puliob2bsales.recatch.cc/workflows/daboqndouz" target="_blank">1분만에 상담받기 &gt;</Link>
             </div>
         </>
     );
