@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './header.css';
 import Menu from "./Menu";
 
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const location = useLocation();
 
     const toggleMenu = () => {
         setIsMenuOpen((prev) => !prev);
@@ -35,9 +37,9 @@ const Header = () => {
                     <div className="header_left">
                     <Link to="/"><h1 className="logo">로고</h1></Link>
                         <ul>
-                            <li><Link to="/">단체선물</Link></li>
+                            <li><Link to="/" className={location.pathname === "/" ? "active" : ""}>단체선물</Link></li>
                             <li><Link to="/">사업제휴</Link></li>
-                            <li><Link to="/station">오피스</Link></li>
+                            <li><Link to="/station" className={location.pathname === "/station" ? "active" : ""}>오피스</Link></li>
                         </ul>
                     </div>
                     <div className="header_right">

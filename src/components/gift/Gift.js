@@ -30,7 +30,7 @@ const Gift = () => {
           }
         });
       },
-      { threshold: 0.1 } // 요소가 10% 보이면 트리거
+      { threshold: 0.2 } // 요소가 10% 보이면 트리거
     );
 
     items.forEach((item) => newObserver.observe(item));
@@ -45,20 +45,61 @@ const Gift = () => {
       {!isMobile ? (
         <div id="b2b_gift">
           <div className="section1">
-            <div style={{padding: '0 0 56.25% 0', position: 'relative'}}><video id="charlla-mp4-HSzSgFSivHX" playsInline preload="auto" disableRemotePlayback autoPlay muted loop  style={{background:'#000',backgroundColor:'transparent',objectFit:'contain',border:'none',width:'100%',height:'100%',position:'absolute',top:'0',left:'0'}}><source src="https://player-api.charlla.io/mp4/HSzSgFSivHX#t=0.001" type="video/mp4" /></video></div>
+            <div style={{ padding: '0 0 56.25% 0', position: 'relative' }}><video id="charlla-mp4-HSzSgFSivHX" playsInline preload="auto" disableRemotePlayback autoPlay muted loop style={{ background: '#000', backgroundColor: 'transparent', objectFit: 'contain', border: 'none', width: '100%', height: '100%', position: 'absolute', top: '0', left: '0' }}><source src="https://player-api.charlla.io/mp4/HSzSgFSivHX#t=0.001" type="video/mp4" /></video></div>
             <div className="section1_overlay"></div>
             <div className="section1_con">
               <div className="text_box item hidden">
                 <p>우리 회사 창립기념일, 명절 선물이 걱정된다면?</p>
-                <h3 className="item hidden fade-item">'직장인 선호 선물 1위'<br/><span>풀리오</span>로 해결하세요!</h3>
+                <h3 className="item hidden fade-item">'직장인 선호 선물 1위'<br /><span>풀리오</span>로 해결하세요!</h3>
               </div>
               <div className="img_box item hidden"><img src="/imgs/image 9.png" alt="풀리오 B2B 대표 제품"></img></div>
             </div>
           </div>
 
           <div className="section2">
-            <div className="section2_con">
+            <div className="section2_con item hidden">
+              <button type="button">1분만에 상담받기</button>
+              <p>풀리오 단체선물 페이지는 기업체를 위해 전문적인 상담과 합리적인 견적을<br/>제공하는 페이지입니다.<br/>우리 회사에게 어울리는 상품군과 합리적인 견적을 제공해드립니다.<br/>주문폼 접수해주시면 신속하게 안내 드리도록 하겠습니다.</p>
+            </div>
+          </div>
 
+          <div className="section3">
+            <div className="section3_con">
+              <h3 className='item hidden'>
+                풀리오 <span>기업 구매 절차</span>
+              </h3>
+              <ul className="item hidden fade-item">
+                <li>
+                  <div>01</div>
+                  <p>
+                    주문 폼 제출
+                  </p>
+                </li>
+                <li>
+                  <div>02</div>
+                  <p>
+                    상담
+                  </p>
+                </li>
+                <li>
+                  <div>03</div>
+                  <p>
+                    견적서 제공
+                  </p>
+                </li>
+                <li>
+                  <div>04</div>
+                  <p>
+                    결제 <span>카드 결제 및 세금계산서 발행</span>
+                  </p>
+                </li>
+                <li>
+                  <div>05</div>
+                  <p>
+                    제품 수령
+                  </p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
