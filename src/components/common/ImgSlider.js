@@ -21,10 +21,10 @@ const ImgSlider = () => {
         <ul className="review_slider" >
             
             <Slider {...settings} ref={slickRef}>
-                <li><img alt="" src="/imgs/gifts/12-swipe1.jpg"></img></li>
-                <li><img alt="" src="/imgs/gifts/12-swipe2.jpg"></img></li>
-                <li><img alt="" src="/imgs/gifts/12-swipe3.jpg"></img></li>
-                <li><img alt="" src="/imgs/gifts/12-swipe4.jpg"></img></li>
+                <li><img alt="" src="/imgs/gifts/12-swipe1.jpg" loading="lazy"></img></li>
+                <li><img alt="" src="/imgs/gifts/12-swipe2.jpg" loading="lazy"></img></li>
+                <li><img alt="" src="/imgs/gifts/12-swipe3.jpg" loading="lazy"></img></li>
+                <li><img alt="" src="/imgs/gifts/12-swipe4.jpg" loading="lazy"></img></li>
             </Slider>    
             <div className="btn_next" onClick={next}>&gt;</div>            
         </ul>
