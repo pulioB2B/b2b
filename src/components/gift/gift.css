@@ -29,9 +29,9 @@
 #b2b_gift .section3_con ul li > p span {display:inline-block;font-weight:400;font-size:16px;letter-spacing: -0.32px;margin-top:10px;}
 
 /* 애니메이션 css */
-#b2b_gift .hidden {opacity:0;transform:translateY(30px);transition:all 0.6s ease-out;}
-#b2b_gift .visible {opacity:1;transform:translateY(0);}
-#b2b_gift .fade-item {transition-delay: 0.7s; }
+#b2b_gift .hidden, #mo_b2_gift .hidden {opacity:0;transform:translateY(30px);transition:all 0.6s ease-out;}
+#b2b_gift .visible, #mo_b2_gift .visible {opacity:1;transform:translateY(0);}
+#b2b_gift .fade-item, #mo_b2_gift .fade-item {transition-delay: 0.7s; }
 
 /* 반응형 CSS */
 @media screen and (max-width: 1385px) {

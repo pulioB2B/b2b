@@ -9,17 +9,7 @@ const Gift = () => {
   const domRef2 = useRef(null);
   const domRef3 = useRef(null);
   const sliderRef = useRef(null);
-
-  useEffect(() => {
-    // 페이지가 완전히 로드된 후 Footer 표시
-    window.onload = () => {
-      domRef1.current.style.background = '#000';
-      domRef2.current.style.background = '#140335';
-      domRef3.current.style.background = '#140335';
-      domRef3.current.style.paddingBottom = '75px';
-      sliderRef.current.style.background = '#140335';
-    };
-  }, []);
+  const btnNextRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -55,6 +45,15 @@ const Gift = () => {
     };
   }, [isMobile]);
 
+  const handleImagLoad = () => {
+    domRef1.current.style.background = '#000';
+    domRef2.current.style.background = '#140335';
+    domRef3.current.style.background = '#140335';
+    domRef3.current.style.paddingBottom = '75px';
+    sliderRef.current.style.background = '#140335';
+    btnNextRef.current.style.display = 'block';
+  }
+
   return (
     <>
       {!isMobile ? (
@@ -74,7 +73,7 @@ const Gift = () => {
           <div className="section2">
             <div className="section2_con item hidden">
               <button type="button">1분만에 상담받기</button>
-              <p>풀리오 단체선물 페이지는 기업체를 위해 전문적인 상담과 합리적인 견적을<br/>제공하는 페이지입니다.<br/>우리 회사에게 어울리는 상품군과 합리적인 견적을 제공해드립니다.<br/>주문폼 접수해주시면 신속하게 안내 드리도록 하겠습니다.</p>
+              <p>풀리오 단체선물 페이지는 기업체를 위해 전문적인 상담과 합리적인 견적을<br />제공하는 페이지입니다.<br />우리 회사에게 어울리는 상품군과 합리적인 견적을 제공해드립니다.<br />주문폼 접수해주시면 신속하게 안내 드리도록 하겠습니다.</p>
             </div>
           </div>
 
@@ -121,18 +120,18 @@ const Gift = () => {
       ) : (
         <>
           <div id="mo_b2_gift">
-            <div className="contents_imgBox mainBg"><img alt="" src="/imgs/gifts/01_1.gif"></img></div>
+            <div className="contents_imgBox mainBg"><img alt="" src="/imgs/gifts/01_1.gif" onLoad={handleImagLoad}></img></div>
             <div className="contents_imgBox"><img alt="" src="/imgs/gifts/03.jpg"></img></div>
-            <div className="contents_imgBox item hidden" ref={domRef1}><img alt="" src="/imgs/gifts/04-effect.jpg"></img></div>
+            <div ref={domRef1}><div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/04-effect.jpg"></img></div></div>
             <div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/05-effect.jpg"></img></div>
             <div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/06-effect.jpg"></img></div>
             <div className="contents_imgBox"><img alt="" src="/imgs/gifts/07.jpg" loading="lazy"></img></div>
-            <div className="contents_imgBox item hidden" ref={domRef2}><img alt="" src="/imgs/gifts/08-effect.jpg" loading="lazy"></img></div>
+            <div ref={domRef2}><div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/08-effect.jpg" loading="lazy"></img></div></div>
             <div className="contents_imgBox"><img alt="" src="/imgs/gifts/10_1.jpg" loading="lazy"></img></div>
             <div className="contents_imgBox"><img alt="" src="/imgs/gifts/10.jpg" loading="lazy"></img></div>
-            <div className="contents_imgBox item hidden" ref={domRef3}><img alt="" src="/imgs/gifts/11-effect_1.jpg" loading="lazy"></img></div>
+            <div ref={domRef3}><div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/11-effect_1.jpg" loading="lazy"></img></div></div>
             <div className="slider_box" ref={sliderRef}>
-              <ImgSlider></ImgSlider>
+              <ImgSlider btnNextRef={btnNextRef}></ImgSlider>
             </div>
             <div className="contents_imgBox"><img alt="" src="/imgs/gifts/13.jpg" loading="lazy"></img></div>
           </div>
