@@ -1,17 +1,34 @@
+/* 피씨 css */
+#b2b_gift .section1 {position:relative;width: 100%;max-height:800px;overflow: hidden;}
+#b2b_gift .section1_overlay {position: absolute;top:0;left:0;width: 100%;height: 100%;z-index:1;background: rgba(0,0,0,0.5);}
+#b2b_gift .section1_con {position:absolute; top:50%;left:50%;transform: translate(-50%,-50%); display: flex;justify-content: space-between;width: 1366px;z-index:2;align-items: center;}
+#b2b_gift .section1_con .text_box p {color:#fff;font-size:23px;font-weight:400;letter-spacing: -0.46px;}
+#b2b_gift .section1_con .text_box h3 {margin-top:11px;color: #fff;font-weight: 600;line-height: 45px;letter-spacing: -0.7px;font-size:35px;}
+#b2b_gift .section1_con .text_box h3 span {background-color: #7C36FF;}
 
-/* 모바일 css */
-#gift_wraps {width:100%;background:#000;}
-#gift_wraps .contents_imgBox {width:100%;}
-#gift_wraps .contents_imgBox img {width:100%;height:100%;object-fit:cover;vertical-align: top;}
+#b2b_gift .section2 {width: 100%;padding:82px 0 147px;box-sizing: border-box;}
+#b2b_gift .section2_con {width:1366px;height:285px;border-radius: 15px;background-color: #f5f5f5;margin:0 auto;}
 
-.slider_box {position:relative;background:#140335;padding-left:10px;overflow: hidden;}
-.review_slider li {width:90vw!important;margin-right:10px;}
-.review_slider li img {width:100%;height:100%;object-fit: cover;pointer-events: none;}
+/* 애니메이션 css */
+#b2b_gift .hidden {opacity:0;transform:translateY(30px);transition:all 0.6s ease-out;}
+#b2b_gift .visible {opacity:1;transform:translateY(0);}
+#b2b_gift .fade-item {transition-delay: 0.8s; }
 
-.slick-prev:before {display:none;}
+/* 반응형 CSS */
+@media screen and (max-width: 1385px) {
+    #b2b_gift .section1_con {width:100%;padding:0 20px;}
+}
 
-.counsel_btn {position: fixed;bottom: 0;right: 0;width: 100%;background: linear-gradient(90deg, #2B00BC 0%, #2E0F6E 100%);z-index: 999999;height:64px;text-align: center;line-height:64px; }
-.counsel_btn a {color: #fff;font-size:18px;font-weight:400;line-height:25px;}
+/* 모바일 css 850 */
+#mo_b2_gift {width:100%;background:#000;}
+#mo_b2_gift .contents_imgBox {width:100%;}
+#mo_b2_gift .contents_imgBox img {width:100%;height:100%;object-fit:cover;vertical-align: top;}
 
-.hidden {opacity:0;transform:translateY(30px);transition:all 0.6s ease-out;}
-.visible {opacity:1;transform:translateY(0);}
+#mo_b2_gift .slider_box {position:relative;background:#140335;padding-left:10px;overflow: hidden;}
+#mo_b2_gift .review_slider li {width:90vw!important;margin-right:10px;}
+#mo_b2_gift .review_slider li img {width:100%;height:100%;object-fit: cover;pointer-events: none;}
+
+#mo_b2_giftt .slick-prev:before {display:none;}
+
+#mo_b2_gift .counsel_btn {position: fixed;bottom: 0;right: 0;width: 100%;background: linear-gradient(90deg, #2B00BC 0%, #2E0F6E 100%);z-index: 999999;height:64px;text-align: center;line-height:64px; }
+#mo_b2_gift .counsel_btn a {color: #fff;font-size:18px;font-weight:400;line-height:25px;}

@@ -44,21 +44,45 @@ const Station = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const items = document.querySelectorAll(".item");
+
+    const newObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      { threshold: 0.1 } // 요소가 10% 보이면 트리거
+    );
+
+    items.forEach((item) => newObserver.observe(item));
+
+    // Cleanup function to remove the observer when the component is unmounted
+    return () => {
+      items.forEach((item) => newObserver.unobserve(item));
+    };
+  }, []);
+
   return (
     <div id="b2b_office">
       <div className="main_bg section1">
         <div className="background_title">Pulio Station</div>
         <div className="text_box">
           <div className="main_text">
-            <div className="title">
+            <div className="title item hidden">
               <p>임직원 피로해소 자판기</p>
               <h2>풀리오 스테이션</h2>
             </div>
-            <p className="sub_title">
+            <p className="sub_title item hidden">
               피로를 녹이는 한 순간,<br />당신 회사만의 특별한 복지!
             </p>
           </div>
-          <div className="desc">
+          <div className="desc item hidden">
             <h3>Pulio Station</h3>
             <p>
               휴게공간이나 라운지 등 원하는 장소에 풀리오 스테이션을 설치하여 임직원들이 자유롭게 풀리오 제품을 이용할 수 있는 서비스입니다.
@@ -69,32 +93,32 @@ const Station = () => {
 
       <div className="section2">
         <div className="section2_box">
-          <p>Pulio Business</p>
-          <h3>
+          <p className='item hidden'>Pulio Business</p>
+          <h3 className='item hidden'>
             풀리오 비즈니스 <span>단독 서비스</span>
           </h3>
           <ul>
-            <li>
+            <li className='item hidden'>
               <div>01</div>
               <p>
                 첫 도입 <span>3개월간</span><br />
                 <span>무상</span> 지원
               </p>
             </li>
-            <li>
+            <li className='item hidden'>
               <div>02</div>
               <p>
                 기업 규모에 따라<br />
                 <span>무상 컨설팅</span>
               </p>
             </li>
-            <li>
+            <li className='item hidden'>
               <div>03</div>
               <p>
                 <span>관리, 배송비, 설치비</span><br />무료
               </p>
             </li>
-            <li>
+            <li className='item hidden'>
               <div>04</div>
               <p>
                 <span>제품 A/S</span> 서비스<br />무료
@@ -106,7 +130,7 @@ const Station = () => {
 
       <div className="section3">
         <div className="section3_box">
-          <h3>
+          <h3 className='item hidden'>
             임직원을 위한 더 나은 근로 환경을 고민 중이신가요?<br />
             <span>풀리오 스테이션이 그 해답</span>을 드립니다!
           </h3>
@@ -169,8 +193,8 @@ const Station = () => {
             Pulio<br />Station
           </h3>
           <div className="station_desc_box">
-            <div ref={zoomContainerRef} className="zoom-container" style={{zIndex:1}}>
-              <img ref={imgRef} src="/imgs/누끼1.png" alt="풀리오 스테이션"/>
+            <div ref={zoomContainerRef} className="zoom-container" style={{ zIndex: 1 }}>
+              <img ref={imgRef} src="/imgs/누끼1.png" alt="풀리오 스테이션" />
             </div>
 
             <div className="fullscreen-overlay"></div>
@@ -423,12 +447,12 @@ const Station = () => {
                 style={{ position: 'absolute', right: -110, top: -240, width: 481, height: 507 }}
                 src="/imgs/99.png"
                 alt="무료체"
-               /> 
+              />
             </div>
-          </div> 
-        </div>      
+          </div>
+        </div>
+      </div>
     </div>
-    </div>    
   );
 };
 
