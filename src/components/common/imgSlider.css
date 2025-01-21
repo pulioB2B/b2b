@@ -1,1 +1,1 @@
-.btn_next {display: block;position: absolute;right: 3vw;top: 50%;transform: translateY(-50%);width: 30px;height: 30px;background: #fff;z-index: 999;line-height: 28px;text-align: center;border-radius: 50%;font-size: 18px;font-weight:600;cursor: pointer;}
+.btn_next {display: none;position: absolute;right: 3vw;top: 50%;transform: translateY(-50%);width: 30px;height: 30px;background: #fff;z-index: 999;line-height: 28px;text-align: center;border-radius: 50%;font-size: 18px;font-weight:600;cursor: pointer;}

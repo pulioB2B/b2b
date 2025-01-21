@@ -1,16 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
 import './gift.css';
 import ImgSlider from "../common/ImgSlider";
 
 const Gift = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const domRef1 = useRef(null);
+  const domRef2 = useRef(null);
+  const domRef3 = useRef(null);
+  const sliderRef = useRef(null);
 
-  const handleImageLoad = () => {
-    // 모든 이미지를 로드한 후 표시
-    setImagesLoaded(true);
-  };
+  useEffect(() => {
+    // 페이지가 완전히 로드된 후 Footer 표시
+    window.onload = () => {
+      domRef1.current.style.background = '#000';
+      domRef2.current.style.background = '#140335';
+      domRef3.current.style.background = '#140335';
+      domRef3.current.style.paddingBottom = '75px';
+      sliderRef.current.style.background = '#140335';
+    };
+  }, []);
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 850);
@@ -110,18 +120,18 @@ const Gift = () => {
         </div>
       ) : (
         <>
-          <div id="mo_b2_gift" style={{ visibility: imagesLoaded ? 'visible' : 'hidden' }}>
-            <div className="contents_imgBox mainBg"><img alt="" src="/imgs/gifts/01_1.gif" onLoad={handleImageLoad}></img></div>
+          <div id="mo_b2_gift">
+            <div className="contents_imgBox mainBg"><img alt="" src="/imgs/gifts/01_1.gif"></img></div>
             <div className="contents_imgBox"><img alt="" src="/imgs/gifts/03.jpg"></img></div>
-            <div className="contents_imgBox item hidden" style={{ background: '#000' }}><img alt="" src="/imgs/gifts/04-effect.jpg"></img></div>
+            <div className="contents_imgBox item hidden" ref={domRef1}><img alt="" src="/imgs/gifts/04-effect.jpg"></img></div>
             <div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/05-effect.jpg"></img></div>
             <div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/06-effect.jpg"></img></div>
             <div className="contents_imgBox"><img alt="" src="/imgs/gifts/07.jpg" loading="lazy"></img></div>
-            <div className="contents_imgBox item hidden" style={{ background: '#140335' }}><img alt="" src="/imgs/gifts/08-effect.jpg" loading="lazy"></img></div>
+            <div className="contents_imgBox item hidden" ref={domRef2}><img alt="" src="/imgs/gifts/08-effect.jpg" loading="lazy"></img></div>
             <div className="contents_imgBox"><img alt="" src="/imgs/gifts/10_1.jpg" loading="lazy"></img></div>
             <div className="contents_imgBox"><img alt="" src="/imgs/gifts/10.jpg" loading="lazy"></img></div>
-            <div className="contents_imgBox item hidden" style={{ background: '#140335', paddingBottom: '75px' }}><img alt="" src="/imgs/gifts/11-effect_1.jpg" loading="lazy"></img></div>
-            <div className="slider_box">
+            <div className="contents_imgBox item hidden" ref={domRef3}><img alt="" src="/imgs/gifts/11-effect_1.jpg" loading="lazy"></img></div>
+            <div className="slider_box" ref={sliderRef}>
               <ImgSlider></ImgSlider>
             </div>
             <div className="contents_imgBox"><img alt="" src="/imgs/gifts/13.jpg" loading="lazy"></img></div>
