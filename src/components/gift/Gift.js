@@ -5,7 +5,12 @@ import ImgSlider from "../common/ImgSlider";
 
 const Gift = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
+  const handleImageLoad = () => {
+    // 모든 이미지를 로드한 후 표시
+    setImagesLoaded(true);
+  };
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 850);
@@ -105,17 +110,17 @@ const Gift = () => {
         </div>
       ) : (
         <>
-          <div id="mo_b2_gift">
-            <div className="contents_imgBox mainBg"><img alt="" src="/imgs/gifts/01_1.gif"></img></div>
+          <div id="mo_b2_gift" style={{ visibility: imagesLoaded ? 'visible' : 'hidden' }}>
+            <div className="contents_imgBox mainBg"><img alt="" src="/imgs/gifts/01_1.gif" onLoad={handleImageLoad}></img></div>
             <div className="contents_imgBox"><img alt="" src="/imgs/gifts/03.jpg"></img></div>
-            <div style={{ background: '#000' }} className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/04-effect.jpg"></img></div>
+            <div className="contents_imgBox item hidden" style={{ background: '#000' }}><img alt="" src="/imgs/gifts/04-effect.jpg"></img></div>
             <div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/05-effect.jpg"></img></div>
             <div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/06-effect.jpg"></img></div>
             <div className="contents_imgBox"><img alt="" src="/imgs/gifts/07.jpg" loading="lazy"></img></div>
-            <div style={{ background: '#140335' }}><div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/08-effect.jpg" loading="lazy"></img></div></div>
+            <div className="contents_imgBox item hidden" style={{ background: '#140335' }}><img alt="" src="/imgs/gifts/08-effect.jpg" loading="lazy"></img></div>
             <div className="contents_imgBox"><img alt="" src="/imgs/gifts/10_1.jpg" loading="lazy"></img></div>
             <div className="contents_imgBox"><img alt="" src="/imgs/gifts/10.jpg" loading="lazy"></img></div>
-            <div style={{ background: '#140335' }}><div className="contents_imgBox item hidden" style={{ background: '#140335', paddingBottom: '75px' }}><img alt="" src="/imgs/gifts/11-effect_1.jpg" loading="lazy"></img></div></div>
+            <div className="contents_imgBox item hidden" style={{ background: '#140335', paddingBottom: '75px' }}><img alt="" src="/imgs/gifts/11-effect_1.jpg" loading="lazy"></img></div>
             <div className="slider_box">
               <ImgSlider></ImgSlider>
             </div>
