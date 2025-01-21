@@ -52,8 +52,7 @@
 }
 
 /* 모바일 css 850 */
-#mo_b2_gift {width:100%;background:#000;}
-#mo_b2_gift .main_bg {min-height:200px;}
+#mo_b2_gift {width:100%; background: #000;}
 #mo_b2_gift .contents_imgBox {width:100%;}
 #mo_b2_gift .contents_imgBox img {width:100%;height:100%;object-fit:cover;vertical-align: top;}
 
