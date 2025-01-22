@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './gift.css';
 import ImgSlider from "../common/ImgSlider";
 import PcImgSlider from "../common/PcImgSlider";
+import LogoSlider from "../common/LogoSlider";
 
 const Gift = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 850);
@@ -83,8 +84,8 @@ const Gift = () => {
             <button type="button" className="main_btn item hidden"><Link to="https://puliob2bsales.recatch.cc/workflows/daboqndouz" target="_blank">단체선물 <span>1분만에 상담받기</span></Link><div className="poi"></div></button>
           </div>
 
-          <div className="section2">
-            <div className="section2_con item hidden">
+          <div className="section3">
+            <div className="section3_con item hidden">
               <div className="text_box">
                 <h3>풀리오 단체선물</h3>
                 <p>풀리오 단체선물 페이지는 기업체를 위해 전문적인 상담과 합리적인 견적을<br />제공하는 페이지입니다.</p>
@@ -98,8 +99,8 @@ const Gift = () => {
             </div>
           </div>
 
-          <div className="section3">
-            <div className="section3_con">
+          <div className="section4">
+            <div className="section4_con">
               <p className='item hidden'><img src="/imgs/gifts/pulio_logo_trans.svg" alt=""></img><span>Business</span></p>
               <h3 className='item hidden'>
                 풀리오 <span>기업 구매 절차</span>
@@ -139,21 +140,16 @@ const Gift = () => {
             </div>
           </div>
 
-          <div className="section4">
+          <div className="section5">
             <p className="item hidden">Review</p>
             <h3 className="item hidden">우리 회사 만족도를 더 높일 수 있는<br />특별한 선물, <span>풀리오</span></h3>
-            <div className="section4_con item hidden fade-item">
+            <div className="section5_con item hidden fade-item">
               <PcImgSlider></PcImgSlider>
             </div>
           </div>
 
-          <div className="section5">
-            <div className="section5_con item hidden">
-              <div className="box">
-                <p>풀리오 공식 홈페이지</p>
-                <button type="button"><Link to="https://puliodays.com/" target="_blank">바로가기 &gt;</Link></button>
-              </div>
-            </div>
+          <div className="section6 item hidden">
+            <LogoSlider></LogoSlider>
           </div>
         </div>
       ) : (
