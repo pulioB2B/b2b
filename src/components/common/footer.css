@@ -3,7 +3,7 @@
 .footer .inner {border-top:1px solid #e1e1e1; width:1366px;overflow:hidden; position:relative; font-weight:400; text-align:center;font-size:12px; clear:both;}
 
 .inner { border-bottom:1px solid #e1e1e1; }
-.inner { overflow:hidden; padding:70px 0 70px 0; margin:0 auto;  }
+.inner { overflow:hidden; padding:70px 0 160px 0; margin:0 auto;  }
 .inner .title { font-size:15px;font-weight:700; }
 .inner .title span { font-size:12px; font-weight:normal; color:#999; padding:0 0 0 8px }
 .inner .title span.more { float:right }
@@ -86,13 +86,13 @@
 
 /* 반응형 CSS */
 @media screen and (max-width: 1365px) {
-    .footer .inner {width: 100%;padding:70px 30px;border-top:none;}
+    .footer .inner {width: 100%;padding:70px 30px 160px;border-top:none;}
     .company_pg {margin: 0 60px;}
     .company_pg .inner2 .info .info_left {margin-right:30px;}
 }
 
 @media screen and (max-width: 1175px) {
-    .footer .inner {width: 100%;padding:70px 30px;}
+    .footer .inner {width: 100%;padding:70px 30px 160px;}
     .cs {display:flex;justify-content: space-between;align-items: center;}
     .company_pg {display: block;margin: 0;}
     .inner .cs .cs_right {display: block;margin-top:13px;padding-top: 13px; border-top: 1px solid #C7C7C7;}

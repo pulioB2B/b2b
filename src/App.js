@@ -8,6 +8,7 @@ import Footer from './components/common/Footer';
 
 const Gift = React.lazy(() => import('./components/gift/Gift'));
 const Station = React.lazy(() => import('./components/station/Station'));
+const Marketing = React.lazy(() => import('./components/marketing/Marketing'));
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Header></Header>
         <Routes>
           <Route path="/" element={<Gift></Gift>}></Route>
+          <Route path="/marketing" element={<Marketing></Marketing>}></Route>
           <Route path="/station" element={<Station></Station>}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>

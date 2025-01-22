@@ -72,10 +72,15 @@ const Gift = () => {
                   <p>우리 회사 창립기념일, 명절 선물이 걱정된다면?</p>
                   <h3 className="item hidden fade-item">'직장인 선호 선물 1위'<br /><span>풀리오</span>로 해결하세요!</h3>
                 </div>
-                <div className="img_box item hidden fade-item"><img src="/imgs/image 9.png" alt="풀리오 B2B 대표 제품"></img></div>
+                <div className="img_box item hidden fade-item">
+                  <img src="/imgs/gifts/v3_main.png" alt="풀리오 B2B 대표 제품"></img>
+                  <img src="/imgs/gifts/matt_main.png" alt="풀리오 B2B 대표 제품"></img>
+                  <img src="/imgs/gifts/v2_main.png" alt="풀리오 B2B 대표 제품"></img>
+                  <span className="circle"><p>직장인 선물</p><p>1위</p></span>
+                </div>
               </div>
             </div>
-            <button type="button" className="main_btn item hidden"><Link to="https://puliob2bsales.recatch.cc/workflows/daboqndouz" target="_blank">단체선물 <span>1분만에 상담받기</span></Link></button>
+            <button type="button" className="main_btn item hidden"><Link to="https://puliob2bsales.recatch.cc/workflows/daboqndouz" target="_blank">단체선물 <span>1분만에 상담받기</span></Link><div className="poi"></div></button>
           </div>
 
           <div className="section2">
@@ -95,7 +100,7 @@ const Gift = () => {
 
           <div className="section3">
             <div className="section3_con">
-              <p className='item hidden'>Pulio Business</p>
+              <p className='item hidden'><img src="/imgs/gifts/pulio_logo_trans.svg" alt=""></img><span>Business</span></p>
               <h3 className='item hidden'>
                 풀리오 <span>기업 구매 절차</span>
               </h3>
@@ -143,10 +148,10 @@ const Gift = () => {
           </div>
 
           <div className="section5">
-            <div className="section5_con">
+            <div className="section5_con item hidden">
               <div className="box">
                 <p>풀리오 공식 홈페이지</p>
-                <button type="button">바로가기 &gt;</button>
+                <button type="button"><Link to="https://puliodays.com/" target="_blank">바로가기 &gt;</Link></button>
               </div>
             </div>
           </div>
