@@ -38,8 +38,7 @@ const Header = () => {
                     <Link to="/"><h1 className="logo">로고</h1></Link>
                         <ul>
                             <li className={location.pathname === "/" ? "active" : ""}><Link to="/">단체선물</Link></li>
-                            <li className={location.pathname === "/marketing" ? "active" : ""}><Link to="/marketing">사업제휴</Link></li>
-                            {/*<li><Link to="/station" className={location.pathname === "/station" ? "active" : ""}>오피스</Link></li>*/}
+                            <li className={location.pathname === "/marketing" ? "active" : ""}><Link to="/marketing">마케팅 제휴</Link></li>
                         </ul>
                     </div>
                     <div className="header_right">
