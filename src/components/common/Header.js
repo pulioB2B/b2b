@@ -37,18 +37,17 @@ const Header = () => {
                     <div className="header_left">
                     <Link to="/"><h1 className="logo">로고</h1></Link>
                         <ul>
-                            <li><Link to="/" className={location.pathname === "/" ? "active" : ""}>단체선물</Link></li>
-                            <li><Link to="/">사업제휴</Link></li>
-                            <li><Link to="/station" className={location.pathname === "/station" ? "active" : ""}>오피스</Link></li>
+                            <li className={location.pathname === "/" ? "active" : ""}><Link to="/">단체선물</Link></li>
+                            <li className={location.pathname === "/station" ? "active" : ""}><Link to="/station">사업제휴</Link></li>
+                            {/*<li><Link to="/station" className={location.pathname === "/station" ? "active" : ""}>오피스</Link></li>*/}
                         </ul>
                     </div>
                     <div className="header_right">
                         <ul>
-                            <li><Link to="/">상담받기</Link></li>
-                            <li><Link to="/">견적문의</Link></li>
-                            <li><Link to="/">주문하기</Link></li>
+                            <li><Link to={location.pathname === '/' ? "https://puliob2bsales.recatch.cc/workflows/daboqndouz" : 'https://puliob2bsales.recatch.cc/workflows/ammynjdcis'} target="_blank">상담받기</Link></li>
+                            <li><Link to="https://puliodays.com/" target="_blank">풀리오 Shop</Link></li>
                         </ul>
-                        <div><button onClick={toggleMenu} className="menu_btn" type="button"></button></div>
+                        {/*<div><button onClick={toggleMenu} className="menu_btn" type="button"></button></div>*/}
                     </div>
                 </div>
             </header>

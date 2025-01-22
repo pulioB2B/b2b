@@ -2,9 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
 import './gift.css';
 import ImgSlider from "../common/ImgSlider";
+import PcImgSlider from "../common/PcImgSlider";
 
 const Gift = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 850);
   const domRef1 = useRef(null);
   const domRef2 = useRef(null);
   const domRef3 = useRef(null);
@@ -30,12 +31,16 @@ const Gift = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
-          } else {
-            entry.target.classList.remove("visible");
-          }
+            if (entry.target.classList.contains('aniDelayBox')) {
+              const liElements = entry.target.querySelectorAll('li');
+              liElements.forEach((li) => {
+                li.classList.add('fade');
+              });
+            }
+          } 
         });
       },
-      { threshold: 0.2 } // 요소가 10% 보이면 트리거
+      { threshold: 0.5 } // 요소가 10% 보이면 트리거
     );
 
     items.forEach((item) => newObserver.observe(item));
@@ -58,31 +63,43 @@ const Gift = () => {
     <>
       {!isMobile ? (
         <div id="b2b_gift">
-          <div className="section1">
-            <div style={{ padding: '0 0 56.25% 0', position: 'relative' }}><video id="charlla-mp4-HSzSgFSivHX" playsInline preload="auto" disableRemotePlayback autoPlay muted loop style={{ background: '#000', backgroundColor: 'transparent', objectFit: 'contain', border: 'none', width: '100%', height: '100%', position: 'absolute', top: '0', left: '0' }}><source src="https://player-api.charlla.io/mp4/HSzSgFSivHX#t=0.001" type="video/mp4" /></video></div>
-            <div className="section1_overlay"></div>
-            <div className="section1_con">
-              <div className="text_box item hidden">
-                <p>우리 회사 창립기념일, 명절 선물이 걱정된다면?</p>
-                <h3 className="item hidden fade-item">'직장인 선호 선물 1위'<br /><span>풀리오</span>로 해결하세요!</h3>
+          <div className="section1_box">
+            <div className="section1">
+              <div style={{ padding: '0 0 56.25% 0', position: 'relative' }}><video id="charlla-mp4-HSzSgFSivHX" playsInline preload="auto" disableRemotePlayback autoPlay muted loop style={{ background: '#000', backgroundColor: 'transparent', objectFit: 'contain', border: 'none', width: '100%', height: '100%', position: 'absolute', top: '0', left: '0' }}><source src="https://player-api.charlla.io/mp4/HSzSgFSivHX#t=0.001" type="video/mp4" /></video></div>
+              <div className="section1_overlay"></div>
+              <div className="section1_con">
+                <div className="text_box item hidden">
+                  <p>우리 회사 창립기념일, 명절 선물이 걱정된다면?</p>
+                  <h3 className="item hidden fade-item">'직장인 선호 선물 1위'<br /><span>풀리오</span>로 해결하세요!</h3>
+                </div>
+                <div className="img_box item hidden fade-item"><img src="/imgs/image 9.png" alt="풀리오 B2B 대표 제품"></img></div>
               </div>
-              <div className="img_box item hidden"><img src="/imgs/image 9.png" alt="풀리오 B2B 대표 제품"></img></div>
             </div>
+            <button type="button" className="main_btn item hidden"><Link to="https://puliob2bsales.recatch.cc/workflows/daboqndouz" target="_blank">단체선물 <span>1분만에 상담받기</span></Link></button>
           </div>
 
           <div className="section2">
             <div className="section2_con item hidden">
-              <button type="button">1분만에 상담받기</button>
-              <p>풀리오 단체선물 페이지는 기업체를 위해 전문적인 상담과 합리적인 견적을<br />제공하는 페이지입니다.<br />우리 회사에게 어울리는 상품군과 합리적인 견적을 제공해드립니다.<br />주문폼 접수해주시면 신속하게 안내 드리도록 하겠습니다.</p>
+              <div className="text_box">
+                <h3>풀리오 단체선물</h3>
+                <p>풀리오 단체선물 페이지는 기업체를 위해 전문적인 상담과 합리적인 견적을<br />제공하는 페이지입니다.</p>
+                <p>우리 회사에게 어울리는 상품군과 합리적인 견적을 제공해드립니다.<br />주문폼 접수해주시면 신속하게 안내 드리도록 하겠습니다.</p>
+                <button className="item hidden fade-item" type="button"><Link to="https://puliob2bsales.recatch.cc/workflows/daboqndouz" target="_blank">1분만에 상담받기 &gt;</Link></button>
+              </div>
+              <div className="img_box">
+                <img src="/imgs/gifts/gift_section2.jpg" alt=""></img>
+                <div>Pulio Gift</div>
+              </div>
             </div>
           </div>
 
           <div className="section3">
             <div className="section3_con">
+              <p className='item hidden'>Pulio Business</p>
               <h3 className='item hidden'>
                 풀리오 <span>기업 구매 절차</span>
               </h3>
-              <ul className="item hidden fade-item">
+              <ul className="item hidden aniDelayBox">
                 <li>
                   <div>01</div>
                   <p>
@@ -114,6 +131,23 @@ const Gift = () => {
                   </p>
                 </li>
               </ul>
+            </div>
+          </div>
+
+          <div className="section4">
+            <p className="item hidden">Review</p>
+            <h3 className="item hidden">우리 회사 만족도를 더 높일 수 있는<br />특별한 선물, <span>풀리오</span></h3>
+            <div className="section4_con item hidden fade-item">
+              <PcImgSlider></PcImgSlider>
+            </div>
+          </div>
+
+          <div className="section5">
+            <div className="section5_con">
+              <div className="box">
+                <p>풀리오 공식 홈페이지</p>
+                <button type="button">바로가기 &gt;</button>
+              </div>
             </div>
           </div>
         </div>
