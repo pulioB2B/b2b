@@ -14,6 +14,7 @@ const LogoSlider = ({logoData}) => {
     autoplay: true, // 자동 재생
     autoplaySpeed: 2000, // 자동 재생 속도
     pauseOnHover: false,
+    draggable:false,
     responsive: [
       {
         breakpoint: 768, // 768px 이하일 때 설정

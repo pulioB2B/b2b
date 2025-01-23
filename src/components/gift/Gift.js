@@ -86,7 +86,7 @@ const Gift = () => {
 
           <div className="section2">
             <h3 className="item hidden">풀리오 단체선물</h3>
-            <p className="item hidden">풀리오 BIZ 페이지는 기업체의 단체주문을 위해 전문적인 상담과 합리적인 견적을 제공하는<br/>페이지입니다. 우리 회사에게 어울리는 상품군과 합리적인 견적을 제공해드립니다.</p>
+            <p className="item hidden">풀리오 단체선물 페이지는 기업체의 단체주문을 위해 전문적인 상담과 합리적인 견적을 제공하는<br/>페이지입니다. 우리 회사에게 어울리는 상품군과 합리적인 견적을 제공해드립니다.</p>
             <ul className="section2_con item hidden fade-item">
               <li>
                 <div><img src="/imgs/gifts/section2_1.jpg" alt=""></img></div>
