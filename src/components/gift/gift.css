@@ -15,7 +15,7 @@
 #b2b_gift .section1_con .img_box .circle p:nth-child(1) {font-size:18px;color:#fff;font-weight:400;letter-spacing: -0.9px;}
 #b2b_gift .section1_con .img_box .circle p:nth-child(2) {font-size:40px;font-weight: 700;letter-spacing: -0.8px;color: #fff;}
 
-#b2b_gift .section1_box button {box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);position:fixed; bottom:57px;left:50%;transform: translateX(-50%);z-index:3;width: 416px;height: 99px;line-height: 99px;text-align: center;color:#fff;border-radius: 49.5px;background:linear-gradient(0deg, #180048 0%, #3A00AE 100%);font-size:30px;transition: scale 0.3s;font-weight:400;}
+#b2b_gift .section1_box button {box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);position:fixed; bottom:57px;left:50%;transform: translateX(-50%);z-index:3;width: 416px;height: 99px;line-height: 99px;text-align: center;color:#fff;border-radius: 49.5px;background:linear-gradient(0deg, #180048 0%, #3A00AE 100%);font-size:30px;transition: transform 0.5s;font-weight:400;}
 #b2b_gift .section1_box button span {font-weight:600;}
 #b2b_gift .section1_box button:hover {transform: translateX(-50%) scale(1.1);}
 #b2b_gift .section1_box button div.poi {
@@ -41,6 +41,16 @@
       top: 30px;
   }
 }
+
+#b2b_gift .section2 {width: 100%;padding:145px 0 185px;background-color: #fff;text-align: center;}
+#b2b_gift .section2 > h3 {color: #180048;font-size:30px;font-weight: 600;letter-spacing: -0.6px;margin-bottom:26px;}
+#b2b_gift .section2 > p {color:#000;font-size:20px;font-weight:400;line-height: 30px;letter-spacing: -0.4px;margin-bottom:76px;}
+#b2b_gift .section2_con {width:1354px;margin:0 auto;display:flex;gap:47px;justify-content: space-between;align-items: center;}
+#b2b_gift .section2_con li {flex:1;padding:25px 33px 40px;height:599px;background-color: #f5f5f5;box-shadow: 0 0 10px 0 rgba(0,0,0,0.16);transition: all 0.5s;border-radius: 15px;cursor: pointer;}
+#b2b_gift .section2_con li:hover {transform: translateY(-20px);}
+#b2b_gift .section2_con li img {border-radius: 50%;}
+#b2b_gift .section2_con li h4 {margin:40px 0 20px;color:#000;font-size:25px;font-weight:600;letter-spacing: -0.5px;}
+#b2b_gift .section2_con li p {color: #000;font-size: 18px;font-weight: 400;line-height: 30px;letter-spacing: -0.36px;text-align: left;}
 
 #b2b_gift .section3 {width: 100%;padding:132px 0;box-sizing: border-box;}
 #b2b_gift .section3_con {display:flex;justify-content: space-between;width:1366px;height:380px;margin:0 auto;}
@@ -74,7 +84,7 @@
 #b2b_gift .section4_con ul li > p {color:#fff;font-size:23px;font-weight:600;letter-spacing:-0.46px;text-align:center;padding-top:19px;}
 #b2b_gift .section4_con ul li > p span {display:inline-block;font-weight:400;font-size:16px;letter-spacing: -0.32px;margin-top:10px;color:rgba(255,255,255,0.7);}
 
-#b2b_gift .section5 {width:100%;padding:93px 0 147px;text-align: center;}
+#b2b_gift .section5 {width:100%;padding:93px 0 186px;text-align: center;}
 #b2b_gift .section5 > h3 {color:#000;font-size:30px;font-weight:400;line-height: 42px;letter-spacing: -0.6px;margin-bottom: 30px;}
 #b2b_gift .section5 > h3 span {font-weight: 600;}
 #b2b_gift .section5 > p {color:#7d7773;font-size:22px;font-weight:400;font-style: italic;margin-bottom:11px;opacity: 0.5;font-family: 'Poppins', sans-serif;}
@@ -105,7 +115,10 @@
 #b2b_gift .section5_con .slick-center .slide-item .review_text p:nth-child(2) {margin-top:9px;margin-bottom:35px;}
 #b2b_gift .section5_con .slick-center  .slide-item .review_text h3 {font-size:22px;font-weight:400;letter-spacing: -0.44px;line-height:25px;}
 
-#b2b_gift .section6 {width:1400px;margin: 0 auto;padding:100px 0;}
+#b2b_gift .section6 {width:1400px;margin: 0 auto;padding:0px 0 200px;text-align: center;}
+#b2b_gift .section6 > h3 {color:#000;font-size:30px;font-weight:400;line-height: 42px;letter-spacing: -0.6px;margin-bottom: 70px;}
+#b2b_gift .section6 > h3 span {font-weight: 600;}
+#b2b_gift .section6 > p {color:#7d7773;font-size:22px;font-weight:400;font-style: italic;margin-bottom:11px;opacity: 0.5;font-family: 'Poppins', sans-serif;}
 #b2b_gift .section6 .slick-slide {
   display: flex !important; /* Flexbox 활성화 */
   justify-content: center;  /* 가로 중앙 정렬 */
@@ -131,10 +144,20 @@
 @media screen and (max-width: 1385px) {
     #b2b_gift .section1 {height:auto;}
     #b2b_gift .section1_con {width:100%;padding:0 20px;}
+
+    #b2b_gift .section2 {padding:145px 20px 185px;}
+    #b2b_gift .section2_con {width:100%;gap:47px;}
+    #b2b_gift .section2_con li {height:510px;}
+    #b2b_gift .section2_con li img {width:260px;}
+    #b2b_gift .section2_con li h4 {margin:30px 0 20px;font-size:22px;}
+    #b2b_gift .section2_con li p {font-size:15px;line-height: 25px;}
+
     #b2b_gift .section3 {width:100%;padding:82px 20px;}
     #b2b_gift .section3_con {width: 100%;}
+
     #b2b_gift .section4_con {width:100%;padding:0 20px;}
     #b2b_gift .section4_con ul li {flex:1;}
+
     #b2b_gift .section5 {padding: 93px 20px 147px;}
     #b2b_gift .section5_con {width:100%;}
     #b2b_gift .section5_con .slide-item .review_text h3 {font-size:14px;line-height:15px;}
@@ -142,11 +165,18 @@
     #b2b_gift .section5_con .slick-center .slide-item .review_text h3 {font-size:18px;line-height:19px;}
     #b2b_gift .section5_con .slick-center .slide-item .review_text p {font-size:13px;line-height: 23px;}
     #b2b_gift .section5_con .slide-item .review_text > div ul img {width: 15px;height:14px;}
-    #b2b_gift .section5 {padding:0 20px;}
+    #b2b_gift .section5 {padding:93px 20px 186px;}
     #b2b_gift .section5_con {width: 100%;}
+
+    #b2b_gift .section6 {width:100%;padding:0 20px 200px;text-align: center;}
 }
 
 @media screen and (max-width: 1250px) {
+  #b2b_gift .section2_con li {height:450px;}
+  #b2b_gift .section2_con li img {width:200px;}
+  #b2b_gift .section2_con li h4 {margin:25px 0 15px;font-size:20px;}
+  #b2b_gift .section2_con li p {font-size:13px;line-height: 20px;}
+
   #b2b_gift .section3_con p {font-size:15px;line-height:23px;}
   #b2b_gift .section3_con .img_box img {width:450px;height:350px;object-fit: cover;}
   #b2b_gift .section3_con .img_box div {font-size:95px;bottom:15px;}
@@ -169,6 +199,12 @@
     #b2b_gift .section1_con .text_box h3 {font-size: 35px;line-height: 50px;}
     #b2b_gift .section1_con .img_box img {transform: scale(0.8);}
     #b2b_gift .section1_con .img_box img:nth-child(2) {transform: translateX(-48%) scale(0.8);}
+
+    #b2b_gift .section2_con li {height:420px;}
+    #b2b_gift .section2_con li img {width:160px;}
+    #b2b_gift .section2_con li h4 {margin:20px 0 10px;font-size:18px;}
+    #b2b_gift .section2_con li p {font-size:13px;line-height: 18px;}
+
     #b2b_gift .section4_con ul li > div {font-size:25px;}
     #b2b_gift .section4_con ul li > p {font-size:18px;}
     #b2b_gift .section4_con ul li > p span {font-size:13px;}

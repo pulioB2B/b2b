@@ -7,7 +7,7 @@
 #b2b_marketing .section1_con h3 {color: #fff;font-weight: 600;letter-spacing: -0.7px;font-size:35px;margin:15px 0 22px;}
 #b2b_marketing .section1_con > div img {width:138px;height:49px;}
 
-#b2b_marketing .section1_box button {box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);position:fixed; bottom:57px;left:50%;transform: translateX(-50%);z-index:3;width: 416px;height: 99px;line-height: 99px;text-align: center;color:#fff;border-radius: 49.5px;background: linear-gradient(0deg, #040209 0%, #1C034F 100%);font-size:30px;transition: scale 0.3s;font-weight:400;}
+#b2b_marketing .section1_box button {box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);position:fixed; bottom:57px;left:50%;transform: translateX(-50%);z-index:3;width: 416px;height: 99px;line-height: 99px;text-align: center;color:#fff;border-radius: 49.5px;background: linear-gradient(0deg, #040209 0%, #1C034F 100%);font-size:30px;transition: transform 0.5s;font-weight:400;}
 #b2b_marketing .section1_box button span {font-weight:600;}
 #b2b_marketing .section1_box button:hover {transform: translateX(-50%) scale(1.1);}
 #b2b_marketing .section1_box button div.poi {
@@ -32,6 +32,18 @@
         top: 30px;
     }
 }
+
+#b2b_marketing .section2 {width:100%;background-color: #e1e1e1;padding: 183px 0;text-align: center;}
+#b2b_marketing .section2_con {display: flex;gap:14px;justify-content: center;align-items: center;}
+#b2b_marketing .section2_con > p {color:#000;font-size: 18px;font-weight: 400;line-height: 30px;letter-spacing: -0.36px;transition: transform 0.3s;text-align: left;}
+#b2b_marketing .section2_con > p span {font-weight: 600;}
+#b2b_marketing .section2_con > div {padding-left:23px;}
+#b2b_marketing .section2_con div span {position:relative; display: inline-block;width: 304px;height:304px;border-radius: 50%;background-color: #4d24a1;transition: transform 0.3s; cursor: pointer;}
+#b2b_marketing .section2_con div span:hover {transform: scale(1.1);z-index: 2;}
+#b2b_marketing .section2_con div span:nth-child(2) {background-color:#2d077b;transform: translateX(-23px);z-index:1;}
+#b2b_marketing .section2_con div span:nth-child(2):hover {transform: translateX(-23px) scale(1.1);}
+#b2b_marketing .section2_con div span p:nth-child(1) {color:#fff;font-family: 'Poppins';font-size: 25px;letter-spacing: -0.25px;font-weight: 600;margin-top:118px;}
+#b2b_marketing .section2_con div span p:nth-child(2) {color:#fff;font-size:25px;font-weight: 400;letter-spacing: -0.5px;margin-top:12px;}
 
 #b2b_marketing .section3 {width:100%;background:#0d0222;padding:96px 0 135px;}
 #b2b_marketing .section3_con {width:1087px;margin:0 auto;text-align:center;}

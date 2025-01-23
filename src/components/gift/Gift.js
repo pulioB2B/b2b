@@ -38,7 +38,7 @@ const Gift = () => {
                 li.classList.add('fade');
               });
             }
-          } 
+          }
         });
       },
       { threshold: 0.5 } // 요소가 10% 보이면 트리거
@@ -84,6 +84,29 @@ const Gift = () => {
             <button type="button" className="main_btn item hidden"><Link to="https://puliob2bsales.recatch.cc/workflows/daboqndouz" target="_blank">단체선물 <span>1분만에 상담받기</span></Link><div className="poi"></div></button>
           </div>
 
+          <div className="section2">
+            <h3 className="item hidden">풀리오 단체선물</h3>
+            <p className="item hidden">풀리오 BIZ 페이지는 기업체의 단체주문을 위해 전문적인 상담과 합리적인 견적을 제공하는<br/>페이지입니다. 우리 회사에게 어울리는 상품군과 합리적인 견적을 제공해드립니다.</p>
+            <ul className="section2_con item hidden fade-item">
+              <li>
+                <div><img src="/imgs/gifts/section2_1.jpg" alt=""></img></div>
+                <h4>기업 EVENT</h4>
+                <p>풀리오 제품은 임직원들에게 감사와 축하의 마음을 전하는 완벽한 선물입니다.<br/>창립기념일, 근로자의 날, 명절, 가정의 달, 승진 선물 등 다양한 사내 행사를 더욱 의미 있게 만들어줍니다.<br/>풀리오로 직원들에게 행복과 성취감을 선사하세요.</p>
+              </li>
+              <li>
+                <div><img src="/imgs/gifts/section2_2.jpg" alt=""></img></div>
+                <h4>기업 외부 행사</h4>
+                <p>우리회사의 이미지를 결정하는 주주총회, 파트너사,투자사 선물에 풀리오 제품은 어떠신가요?<br/>중요한 순간을 더욱 특별하게 만들어주는 풀리오 제품으로 소중한 관계가 더욱 깊어집니다. </p>
+              </li>
+              <li>
+                <div><img src="/imgs/gifts/section2_3.jpg" alt=""></img></div>
+                <h4>고객 감사 선물</h4>
+                <p>소중한 고객에게 감사의 마음을 전하는 제품을 찾고 계신가요? 풀리오는 고객에게 감사의 마음을 전하는 이상적인 선물입니다. 고객 감사 이벤트나 VIP고객에게  풀리오 제품을 선물함으로써, 관계가 더욱 돈독해지고 재구매율이 높아집니다.</p>
+              </li>
+            </ul>
+          </div>
+
+        {/*
           <div className="section3">
             <div className="section3_con item hidden">
               <div className="text_box">
@@ -98,6 +121,7 @@ const Gift = () => {
               </div>
             </div>
           </div>
+        */}
 
           <div className="section4">
             <div className="section4_con">
@@ -149,7 +173,28 @@ const Gift = () => {
           </div>
 
           <div className="section6 item hidden">
-            <LogoSlider></LogoSlider>
+            <p className="item hidden">CUSTOMER</p>
+            <h3 className="item hidden"><span>업계의 리더</span>들이 먼저 선택한 <span>풀리오</span></h3>
+            <div className="item hidden fade-item"><LogoSlider logoData={[
+              "/imgs/gifts/galleria.svg",
+              "/imgs/gifts/livart.svg",
+              "/imgs/gifts/airbusan.svg",
+              "/imgs/gifts/oddugi.svg",
+              "/imgs/gifts/bagen.svg",
+              "/imgs/gifts/shinhan.svg",
+              "/imgs/gifts/nanbang.svg",
+              "/imgs/gifts/sk_shieldus.png",
+            ]}></LogoSlider></div>
+            <div className="item hidden fade-item"><LogoSlider logoData={[
+              "/imgs/gifts/TossBank.png",
+              "/imgs/gifts/hugel.png",
+              "/imgs/gifts/nonghub.svg",
+              "/imgs/gifts/hyundai.svg",
+              "/imgs/gifts/kyobo.svg",
+              "/imgs/gifts/lg.svg",
+              "/imgs/gifts/sk.svg",
+              "/imgs/gifts/ewp.svg",
+            ]}></LogoSlider></div>
           </div>
         </div>
       ) : (
