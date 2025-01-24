@@ -10,7 +10,7 @@
 .inner .title span.more a { color:#fff; background:#222; padding:2px 10px 3px;  border-radius:8px;-moz-border-radius:8px; -webkit-border-radius:8px; }
 .inner .title a { color:#888; font-weight:300; }
 
-.btn_go_mall {margin-top:37px;}
+.btn_go_mall {margin-top:25px;}
 .btn_go_mall a {display:flex;align-items:center;justify-content:center;color:#fff;width: 206px;height:35px;line-height: 35px;background-color: #2e0f6e;border-radius: 5px;font-size:13px;font-weight:400;letter-spacing: -0.13px;;}
 .btn_go_mall img:nth-child(1) {width:48px;height:17px;margin-right:7px;}
 .btn_go_mall img:nth-child(2) {width: 13px;height:11px;margin-left:4px;}
