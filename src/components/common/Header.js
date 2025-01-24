@@ -35,7 +35,7 @@ const Header = () => {
             <header className={`header ${scrolled ? 'scrolled' : ''}`}>
                 <div className="header_inner">
                     <div className="header_left">
-                    <Link to="/"><h1 className="logo"><img src="/imgs/logo_white.svg" alt="풀리오 B2B 로고"></img>Business</h1></Link>
+                    <Link to="/"><h1 className="logo"><img src="/imgs/logo_white.svg" alt="풀리오 Business 로고"></img>Business</h1></Link>
                         <ul>
                             <li className={location.pathname === "/" ? "active" : ""}><Link to="/">단체선물</Link></li>
                             <li className={location.pathname === "/marketing" ? "active" : ""}><Link to="/marketing">마케팅 제휴</Link></li>
