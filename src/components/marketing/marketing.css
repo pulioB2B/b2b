@@ -55,6 +55,10 @@
 #b2b_marketing .section3_con ul li {opacity:0;cursor: pointer;width:260px;height:170px;margin-right:17px;border-radius:15px;padding:17px 27px;box-sizing:border-box;}
 #b2b_marketing .section3_con ul li.fade {animation: fadeIn 0.5s ease-out forwards;}
 #b2b_marketing .section3_con ul li:hover {box-shadow: 0px 0px 6px #fff;}
+#b2b_marketing .section3_con ul li:hover {box-shadow: 0px 0px 6px rgba(0,0,0,0.7);}
+#b2b_marketing .section3_con ul li:hover > div {color:#000;border-bottom:1px solid #000;}
+#b2b_marketing .section3_con ul li:hover > p {color:#000;}
+#b2b_marketing .section3_con ul li:hover > p span {color:rgba(0,0,0,0.7);}
 #b2b_marketing .section3_con ul li:nth-child(1) {animation-delay: 0s;background-color: #8d7bf2;}
 #b2b_marketing .section3_con ul li:nth-child(2) {animation-delay: 0.3s;background-color: #7752e6;}
 #b2b_marketing .section3_con ul li:nth-child(3) {animation-delay: 0.5s;background-color: #6b38d2;}
@@ -86,3 +90,18 @@
 #b2b_marketing .hidden {opacity:0;transform:translateY(30px);transition:all 0.6s ease-out;}
 #b2b_marketing .visible {opacity:1;transform:translateY(0);}
 #b2b_marketing .fade-item {transition-delay: 0.6s; }
+
+/* 반응형 css */
+@media screen and (max-width: 1400px) {
+  #b2b_marketing .section3_con {width:100%;padding:0 20px;}
+  #b2b_marketing .section3_con ul li {flex:1;}
+  #b2b_marketing .section2_con {position: relative;}
+  #b2b_marketing .section2_con > p:nth-child(1) {position: absolute;top:-80px;left:20%;}
+  #b2b_marketing .section2_con > p:nth-child(3) {position: absolute;bottom:-80px;right:20%;}
+}
+
+@media screen and (max-width: 1000px) {
+  #b2b_marketing .section3_con ul li > p {font-size:18px;line-height: 25px!important;}
+  #b2b_marketing .section2_con > p:nth-child(1) {position: absolute;top:-80px;left:10%;}
+  #b2b_marketing .section2_con > p:nth-child(3) {position: absolute;bottom:-80px;right:10%;}
+}

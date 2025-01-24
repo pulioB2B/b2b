@@ -14,6 +14,11 @@ const Gift = () => {
   const btnNextRef = useRef(null);
 
   useEffect(() => {
+    // 페이지가 렌더링될 때 스크롤을 최상단으로
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 850);
     };
@@ -184,6 +189,7 @@ const Gift = () => {
               "/imgs/gifts/shinhan.svg",
               "/imgs/gifts/nanbang.svg",
               "/imgs/gifts/sk_shieldus.png",
+              "/imgs/gifts/johnson.png",
             ]}></LogoSlider></div>
             <div className="item hidden fade-item"><LogoSlider logoData={[
               "/imgs/gifts/TossBank.png",
@@ -192,8 +198,9 @@ const Gift = () => {
               "/imgs/gifts/hyundai.svg",
               "/imgs/gifts/kyobo.svg",
               "/imgs/gifts/lg.svg",
-              "/imgs/gifts/sk.svg",
+              "/imgs/gifts/dior.png",
               "/imgs/gifts/ewp.svg",
+              "/imgs/gifts/sk.svg",
             ]}></LogoSlider></div>
           </div>
         </div>

@@ -7,6 +7,11 @@ const Marketing = () => {
     const [isHovered2, setIsHovered2] = useState(false);
 
     useEffect(() => {
+        // 페이지가 렌더링될 때 스크롤을 최상단으로
+        window.scrollTo(0, 0);
+      }, []);
+      
+    useEffect(() => {
         const items = document.querySelectorAll(".item");
 
         const newObserver = new IntersectionObserver(
@@ -50,14 +55,14 @@ const Marketing = () => {
 
                 <div className="section2">
                     <div className="section2_con">
-                        <p style={{transform : isHovered1 ? 'scale(1.05)' : 'scale(1)'}} className="item hidden fade-item">풀리오와 콜라보를 통해 양사의 <span>홍보, 판매, 그리고<br />브랜드 이미지를 강화하며 시너지를 극대화</span>하세요.</p>
+                        <p style={{ transform: isHovered1 ? 'scale(1.05)' : 'scale(1)' }} className="item hidden fade-item">풀리오와 콜라보를 통해 양사의 <span>홍보, 판매, 그리고<br />브랜드 이미지를 강화하며 시너지를 극대화</span>하세요.</p>
                         <div className="item hidden">
                             <span onMouseEnter={() => setIsHovered1(true)}
                                 onMouseLeave={() => setIsHovered1(false)}><p>Collaboration</p><p>브랜드 협업</p></span>
                             <span onMouseEnter={() => setIsHovered2(true)}
                                 onMouseLeave={() => setIsHovered2(false)}><p>Promotion</p><p>제휴 프로모션</p></span>
                         </div>
-                        <p style={{transform : isHovered2 ? 'scale(1.05)' : 'scale(1)'}} className="item hidden fade-item">제휴 프로모션을 통해 양사의 <span>고객에게 특별한 혜택을<br />제공하고, 효과적인 마케팅 성과를 창출</span>하세요.</p>
+                        <p style={{ transform: isHovered2 ? 'scale(1.05)' : 'scale(1)' }} className="item hidden fade-item">제휴 프로모션을 통해 양사의 <span>고객에게 특별한 혜택을<br />제공하고, 효과적인 마케팅 성과를 창출</span>하세요.</p>
                     </div>
                 </div>
 
@@ -104,9 +109,9 @@ const Marketing = () => {
                         </h3>
                         <div className="logo_box item hidden fade-item">
                             <ul>
+                                <li><img src="/imgs/marketings/hyatt.svg" alt=""></img></li>
                                 <li><img src="/imgs/marketings/gravity.png" alt=""></img></li>
                                 <li><img src="/imgs/marketings/tada.png" alt=""></img></li>
-                                <li><img src="/imgs/marketings/hyatt.svg" alt=""></img></li>
                             </ul>
                             <ul>
                                 <li><img src="/imgs/marketings/voco.png" alt=""></img></li>
