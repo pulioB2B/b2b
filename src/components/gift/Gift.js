@@ -178,7 +178,7 @@ const Gift = () => {
           </div>
 
           <div className="section6 item hidden">
-            <p className="item hidden">CUSTOMER</p>
+            <p className="item hidden">Customer</p>
             <h3 className="item hidden"><span>업계의 리더</span>들이 먼저 선택한 <span>풀리오</span></h3>
             <div className="item hidden fade-item"><LogoSlider logoData={[
               "/imgs/gifts/galleria.svg",
@@ -189,7 +189,7 @@ const Gift = () => {
               "/imgs/gifts/shinhan.svg",
               "/imgs/gifts/nanbang.svg",
               "/imgs/gifts/sk_shieldus.png",
-              "/imgs/gifts/johnson.png",
+              "/imgs/gifts/johnso.png",
             ]}></LogoSlider></div>
             <div className="item hidden fade-item"><LogoSlider logoData={[
               "/imgs/gifts/TossBank.png",
@@ -197,7 +197,7 @@ const Gift = () => {
               "/imgs/gifts/nonghub.svg",
               "/imgs/gifts/hyundai.svg",
               "/imgs/gifts/kyobo.svg",
-              "/imgs/gifts/lg.svg",
+              "/imgs/gifts/lg_dis.png",
               "/imgs/gifts/dior.png",
               "/imgs/gifts/ewp.svg",
               "/imgs/gifts/sk.svg",

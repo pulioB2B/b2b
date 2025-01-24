@@ -71,7 +71,7 @@ const PcImgSlider = () => {
                     <li className="slide-item">
                         <div className="box">
                             <div className="img_box">
-                                <img alt="" src="/imgs/gifts/review1.jpg" loading="lazy"></img>
+                                <img alt="" src="/imgs/gifts/review2.jpg" loading="lazy"></img>
                                 <div className="img_overlay"></div>
                             </div>
                             <div className="review_text">
@@ -93,7 +93,7 @@ const PcImgSlider = () => {
                     <li className="slide-item">
                         <div className="box">
                             <div className="img_box">
-                                <img alt="" src="/imgs/gifts/review1.jpg" loading="lazy"></img>
+                                <img alt="" src="/imgs/gifts/review3.jpg" loading="lazy"></img>
                                 <div className="img_overlay"></div>
                             </div>
                             <div className="review_text">
@@ -115,7 +115,7 @@ const PcImgSlider = () => {
                     <li className="slide-item">
                         <div className="box">
                             <div className="img_box">
-                                <img alt="" src="/imgs/gifts/review1.jpg" loading="lazy"></img>
+                                <img alt="" src="/imgs/gifts/review4.jpg" loading="lazy"></img>
                                 <div className="img_overlay"></div>
                             </div>
                             <div className="review_text">
