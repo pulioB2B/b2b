@@ -11,7 +11,7 @@
 .inner .title a { color:#888; font-weight:300; }
 
 .btn_go_mall {margin-top:37px;}
-.btn_go_mall a {display:flex;align-items:center;justify-content:center;color:#fff;width: 206px;height:35px;line-height: 35px;background-color: #2e0f6e;border-radius: 5px;}
+.btn_go_mall a {display:flex;align-items:center;justify-content:center;color:#fff;width: 206px;height:35px;line-height: 35px;background-color: #2e0f6e;border-radius: 5px;font-size:13px;font-weight:400;letter-spacing: -0.13px;;}
 .btn_go_mall img:nth-child(1) {width:48px;height:17px;margin-right:7px;}
 .btn_go_mall img:nth-child(2) {width: 13px;height:11px;margin-left:4px;}
 
@@ -97,6 +97,8 @@
 }
 
 @media screen and (max-width: 1175px) {
+    .btn_go_mall {width:100%;margin-top:16px;}
+    .btn_go_mall a {width: 100%;}
     .footer .inner {width: 100%;padding:70px 30px 160px;}
     .cs {display:flex;justify-content: space-between;align-items: center;}
     .company_pg {display: block;margin: 0;}
@@ -119,5 +121,5 @@
     .company_pg .inner2 .info .info_left ul:first-child, .company_pg .inner2 .info .info_right ul:first-child  {margin-right:15px;}
     .company_pg .inner2 .info .info_left ul:first-child li, .company_pg .inner2 .info .info_right ul:first-child li {width:76px;}
     .cs_right .info_left {width: 61px;}
-    .footer .inner {width: 100%;padding:30px 20px 70px;}
+    .footer .inner {width: 100%;padding:30px 20px 150px;}
 }
