@@ -1,5 +1,6 @@
 import React from "react";
 import './footer.css';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -81,6 +82,7 @@ const Footer = () => {
                                     <li>(주)풀리오</li>
                                 </ul>
                             </li>
+                            <li><button className="btn_go_mall" type='button'><Link to="https://puliodays.com/" target="_blank"><img src="/imgs/logo_white.svg" alt="풀리오 로고"></img>자사몰 바로가기<img src="/imgs/Arrow 1.svg" alt=""></img></Link></button></li>
                         </ul>
                         </div>
                     </div>

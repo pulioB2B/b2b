@@ -10,6 +10,11 @@
 .inner .title span.more a { color:#fff; background:#222; padding:2px 10px 3px;  border-radius:8px;-moz-border-radius:8px; -webkit-border-radius:8px; }
 .inner .title a { color:#888; font-weight:300; }
 
+.btn_go_mall {margin-top:37px;}
+.btn_go_mall a {display:flex;align-items:center;justify-content:center;color:#fff;width: 206px;height:35px;line-height: 35px;background-color: #2e0f6e;border-radius: 5px;}
+.btn_go_mall img:nth-child(1) {width:48px;height:17px;margin-right:7px;}
+.btn_go_mall img:nth-child(2) {width: 13px;height:11px;margin-left:4px;}
+
 /* 중간 고객센터 */
 .inner .cs {  overflow:hidden;  }
 .inner .cs ul { clear:both }
@@ -35,7 +40,7 @@
 .inner .account li { line-height:1.8; }
 .inner .account li.right { margin:-16px 0 0 38px }
 .inner .account .info { display:flex;font-size:12px; vertical-align:top;}
-.inner .account .info .info_left {margin-right:30px;font-weight:500;}
+.inner .account .info .info_left {margin-right:70px;font-weight:500;}
 .inner .account .info p { padding:16px 0 0 }
 .inner .account .info select { width:187px; height:25px; clear:both; font-size:12px; color:#888;  background:#fff; border:1px solid #e1e1e1; }
 .inner .account .info .han {  display:inline-block; padding:2px 0 1px 0; vertical-align:top; line-height:1.5;   color:#222;  }
