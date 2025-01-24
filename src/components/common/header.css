@@ -19,12 +19,22 @@
 
 /* 반응형 CSS */
 @media screen and (max-width: 1385px) {
-    .header_inner {width: 100%; padding:0 30px; }
+    .header_inner {width: 100%; padding:0 20px; }
     .header_left .logo {margin-right:60px;}
     .header_right ul li:last-child {margin-right:0;}
 }
 
 @media screen and (max-width: 850px) {
     .menu_btn {display:block;}
-    .header_left ul {display:none;}
+    .header_inner {display: block;}
+    .header_left {justify-content: space-between;}
+    .header_right {display:none;}
+    .header_left ul {height:20px;line-height: 20px;}
+    .header_left ul li {margin-right:31px;font-size:13px;}
+    .header_left .logo {font-size:17px;letter-spacing: -0.699px;height:20px;line-height: 20px;margin-right:0;}
+    .header_left .logo img {width:44.5px;height:16px;vertical-align: 0px;}
+}
+
+@media screen and (max-width: 400px) {
+    .header_left ul li {margin-right:15px}
 }

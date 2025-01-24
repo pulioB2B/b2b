@@ -19,14 +19,14 @@ const LogoSlider = ({logoData}) => {
       {
         breakpoint: 768, // 768px 이하일 때 설정
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 480, // 480px 이하일 때 설정
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -41,9 +41,8 @@ const LogoSlider = ({logoData}) => {
             display: "flex",               // Flexbox 사용
             justifyContent: "center",      // 가로 중앙 정렬
             alignItems: "center",          // 세로 중앙 정렬
-            height: "150px",               // 슬라이드 높이
+            height: "100px",               // 슬라이드 높이
             padding: "0 10px",
-                       // 슬라이드 좌우 여백
           }}>
             <img
               src={logo}

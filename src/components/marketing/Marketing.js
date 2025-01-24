@@ -47,7 +47,7 @@ const Marketing = () => {
                         <div className="section1_con">
                             <div className="item hidden"><img src="/imgs/logo_white.svg" alt="풀리오 로고"></img></div>
                             <h3 className="item hidden">마케팅 제휴 안내</h3>
-                            <p className="item hidden fade-item">풀리오는 협업, 제휴 프로모션 등 파트너사의 소중한<br />제안을 기다리고 있습니다.</p>
+                            <p className="item hidden fade-item"><span style={{whiteSpace:'nowrap'}}>풀리오는 협업, 제휴 프로모션 등 파트너사의</span><br />소중한 제안을 기다리고 있습니다.</p>
                         </div>
                     </div>
                     <button type="button" className="main_btn item hidden"><Link to="https://puliob2bsales.recatch.cc/workflows/ammynjdcis" target="_blank">마케팅 제휴 <span>1분만에 상담받기</span></Link><div className="poi"></div></button>
@@ -109,8 +109,8 @@ const Marketing = () => {
                         </h3>
                         <div className="logo_box item hidden fade-item">
                             <ul>
-                                <li><img src="/imgs/marketings/hyatt.svg" alt=""></img></li>
                                 <li><img src="/imgs/marketings/gravity.png" alt=""></img></li>
+                                <li><img src="/imgs/marketings/hyatt.svg" alt=""></img></li>
                                 <li><img src="/imgs/marketings/tada.png" alt=""></img></li>
                             </ul>
                             <ul>

@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './imgSlider.css';
 
-const PcImgSlider = () => {
+const PcImgSlider = ({isMobile}) => {
     const slickRef = useRef(null);
 
     const [slidesToShow, setSlidesToShow] = useState(3); // 기본값 3으로 설정
@@ -35,7 +35,18 @@ const PcImgSlider = () => {
         slidesToShow: slidesToShow,
         slidesToScroll: 1,
         centerMode: true, // 센터 모드 활성화
-        centerPadding: "0px", // 중앙 슬라이드의 양쪽 여백
+        centerPadding: "0px", // 중앙 슬라이드의 양쪽 여백\
+        responsive: [
+            {
+              breakpoint: 850, // 768px 이하일 때 설정
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth:true,
+                centerMode:false
+              },
+            }
+          ],
     };
 
     const next = useCallback(() => slickRef.current.slickNext(), []);
@@ -135,8 +146,8 @@ const PcImgSlider = () => {
                         </div>
                     </li>
                 </Slider>
-                <div className="btn_prev" onClick={prev}><img src="/imgs/gifts/next.svg" alt=""></img></div>
-                <div className="btn_next" onClick={next}><img src="/imgs/gifts/next.svg" alt=""></img></div>
+                {!isMobile && <div className="btn_prev" onClick={prev}><img src="/imgs/gifts/next.svg" alt=""></img></div>}
+                {!isMobile && <div className="btn_next" onClick={next}><img src="/imgs/gifts/next.svg" alt=""></img></div>}
             </ul>
         </>
     );

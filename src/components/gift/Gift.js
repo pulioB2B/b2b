@@ -1,32 +1,27 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import './gift.css';
-import ImgSlider from "../common/ImgSlider";
 import PcImgSlider from "../common/PcImgSlider";
 import LogoSlider from "../common/LogoSlider";
 
 const Gift = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 850);
-  const domRef1 = useRef(null);
-  const domRef2 = useRef(null);
-  const domRef3 = useRef(null);
-  const sliderRef = useRef(null);
-  const btnNextRef = useRef(null);
-
-  useEffect(() => {
-    // 페이지가 렌더링될 때 스크롤을 최상단으로
-    window.scrollTo(0, 0);
-  }, []);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 850);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    // Add event listener for resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isMobile]);
+
+  useEffect(() => {
+    // 페이지가 렌더링될 때 스크롤을 최상단으로
+    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
@@ -54,20 +49,9 @@ const Gift = () => {
     return () => {
       items.forEach((item) => newObserver.unobserve(item));
     };
-  }, [isMobile]);
-
-  const handleImagLoad = () => {
-    domRef1.current.style.background = '#000';
-    domRef2.current.style.background = '#140335';
-    domRef3.current.style.background = '#140335';
-    domRef3.current.style.paddingBottom = '75px';
-    sliderRef.current.style.background = '#140335';
-    btnNextRef.current.style.display = 'block';
-  }
-
+  }, []);
   return (
     <>
-      {!isMobile ? (
         <div id="b2b_gift">
           <div className="section1_box">
             <div className="section1">
@@ -91,42 +75,28 @@ const Gift = () => {
 
           <div className="section2">
             <h3 className="item hidden">풀리오 단체선물</h3>
-            <p className="item hidden">풀리오 단체선물 페이지는 기업체의 단체주문을 위해 전문적인 상담과 합리적인 견적을 제공하는<br/>페이지입니다. 우리 회사에게 어울리는 상품군과 합리적인 견적을 제공해드립니다.</p>
-            <ul className="section2_con item hidden fade-item">
-              <li>
+            <p className="item hidden">풀리오 단체선물 페이지는 기업체의 단체주문을 위해 전문적인 상담과 합리적인 견적을 제공하는 <br/>페이지입니다. 우리 회사에게 어울리는 상품군과 합리적인 견적을 제공해드립니다.</p>
+            <ul className="section2_con">
+              <li className="item hidden fade-item">
+                {isMobile && <h4>기업 EVENT</h4>}
                 <div><img src="/imgs/gifts/section2_1.jpg" alt=""></img></div>
-                <h4>기업 EVENT</h4>
+                {!isMobile && <h4>기업 EVENT</h4>}
                 <p>풀리오 제품은 임직원들에게 감사와 축하의 마음을 전하는 완벽한 선물입니다.<br/>창립기념일, 근로자의 날, 명절, 가정의 달, 승진 선물 등 다양한 사내 행사를 더욱 의미 있게 만들어줍니다.<br/>풀리오로 직원들에게 행복과 성취감을 선사하세요.</p>
               </li>
-              <li>
+              <li className="item hidden fade-item">
+                {isMobile && <h4>기업 외부 행사</h4>}
                 <div><img src="/imgs/gifts/section2_2.jpg" alt=""></img></div>
-                <h4>기업 외부 행사</h4>
+                {!isMobile && <h4>기업 외부 행사</h4>}
                 <p>우리회사의 이미지를 결정하는 주주총회, 파트너사,투자사 선물에 풀리오 제품은 어떠신가요?<br/>중요한 순간을 더욱 특별하게 만들어주는 풀리오 제품으로 소중한 관계가 더욱 깊어집니다. </p>
               </li>
-              <li>
+              <li className="item hidden fade-item">
+                {isMobile && <h4>고객 감사 선물</h4>}
                 <div><img src="/imgs/gifts/section2_3.jpg" alt=""></img></div>
-                <h4>고객 감사 선물</h4>
+                {!isMobile && <h4>고객 감사 선물</h4>}
                 <p>소중한 고객에게 감사의 마음을 전하는 제품을 찾고 계신가요? 풀리오는 고객에게 감사의 마음을 전하는 이상적인 선물입니다. 고객 감사 이벤트나 VIP고객에게  풀리오 제품을 선물함으로써, 관계가 더욱 돈독해지고 재구매율이 높아집니다.</p>
               </li>
             </ul>
           </div>
-
-        {/*
-          <div className="section3">
-            <div className="section3_con item hidden">
-              <div className="text_box">
-                <h3>풀리오 단체선물</h3>
-                <p>풀리오 단체선물 페이지는 기업체를 위해 전문적인 상담과 합리적인 견적을<br />제공하는 페이지입니다.</p>
-                <p>우리 회사에게 어울리는 상품군과 합리적인 견적을 제공해드립니다.<br />주문폼 접수해주시면 신속하게 안내 드리도록 하겠습니다.</p>
-                <button className="item hidden fade-item" type="button"><Link to="https://puliob2bsales.recatch.cc/workflows/daboqndouz" target="_blank">1분만에 상담받기 &gt;</Link></button>
-              </div>
-              <div className="img_box">
-                <img src="/imgs/gifts/gift_section2.jpg" alt=""></img>
-                <div>Pulio Gift</div>
-              </div>
-            </div>
-          </div>
-        */}
 
           <div className="section4">
             <div className="section4_con">
@@ -173,14 +143,15 @@ const Gift = () => {
             <p className="item hidden">Review</p>
             <h3 className="item hidden">우리 회사 만족도를 더 높일 수 있는<br />특별한 선물, <span>풀리오</span></h3>
             <div className="section5_con item hidden fade-item">
-              <PcImgSlider></PcImgSlider>
+              <PcImgSlider isMobile={isMobile}></PcImgSlider>
             </div>
           </div>
 
           <div className="section6 item hidden">
             <p className="item hidden">Customer</p>
             <h3 className="item hidden"><span>업계의 리더</span>들이 먼저 선택한 <span>풀리오</span></h3>
-            <div className="item hidden fade-item"><LogoSlider logoData={[
+            {!isMobile ? <>
+              <div className="item hidden fade-item"><LogoSlider logoData={[
               "/imgs/gifts/galleria.svg",
               "/imgs/gifts/livart.svg",
               "/imgs/gifts/airbusan.svg",
@@ -202,33 +173,37 @@ const Gift = () => {
               "/imgs/gifts/ewp.svg",
               "/imgs/gifts/sk.svg",
             ]}></LogoSlider></div>
+            </> : <>
+            <div className="item hidden fade-item"><LogoSlider logoData={[
+              "/imgs/gifts/galleria.svg",
+              "/imgs/gifts/livart.svg",
+              "/imgs/gifts/airbusan.svg",
+              "/imgs/gifts/oddugi.svg",
+              "/imgs/gifts/bagen.svg",
+              "/imgs/gifts/shinhan.svg",
+              
+            ]}></LogoSlider></div>
+            <div className="item hidden fade-item"><LogoSlider logoData={[
+              "/imgs/gifts/TossBank.png",
+              "/imgs/gifts/hugel.png",
+              "/imgs/gifts/nonghub.svg",
+              "/imgs/gifts/hyundai.svg",
+              "/imgs/gifts/kyobo.svg",
+              "/imgs/gifts/lg_dis.png",
+              
+            ]}></LogoSlider></div>
+            <div className="item hidden fade-item"><LogoSlider logoData={[
+              "/imgs/gifts/nanbang.svg",
+              "/imgs/gifts/sk_shieldus.png",
+              "/imgs/gifts/johnso.png",
+              "/imgs/gifts/dior.png",
+              "/imgs/gifts/ewp.svg",
+              "/imgs/gifts/sk.svg",
+            ]}></LogoSlider></div>
+            </>
+            }
           </div>
         </div>
-      ) : (
-        <>
-          <div id="mo_b2_gift">
-            <div className="contents_imgBox mainBg"><img alt="" src="/imgs/gifts/01_1.gif" onLoad={handleImagLoad}></img></div>
-            <div className="contents_imgBox"><img alt="" src="/imgs/gifts/03.jpg"></img></div>
-            <div ref={domRef1}><div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/04-effect.jpg"></img></div></div>
-            <div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/05-effect.jpg"></img></div>
-            <div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/06-effect.jpg"></img></div>
-            <div className="contents_imgBox"><img alt="" src="/imgs/gifts/07.jpg" loading="lazy"></img></div>
-            <div ref={domRef2}><div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/08-effect.jpg" loading="lazy"></img></div></div>
-            <div className="contents_imgBox"><img alt="" src="/imgs/gifts/10_1.jpg" loading="lazy"></img></div>
-            <div className="contents_imgBox"><img alt="" src="/imgs/gifts/10.jpg" loading="lazy"></img></div>
-            <div ref={domRef3}><div className="contents_imgBox item hidden"><img alt="" src="/imgs/gifts/11-effect_1.jpg" loading="lazy"></img></div></div>
-            <div className="slider_box" ref={sliderRef}>
-              <ImgSlider btnNextRef={btnNextRef}></ImgSlider>
-            </div>
-            <div className="contents_imgBox"><img alt="" src="/imgs/gifts/13.jpg" loading="lazy"></img></div>
-          </div>
-
-          <div className="counsel_btn">
-            <Link to="https://puliob2bsales.recatch.cc/workflows/daboqndouz" target="_blank">1분만에 상담받기 &gt;</Link>
-          </div>
-        </>
-      )}
-
     </>
   );
 }
