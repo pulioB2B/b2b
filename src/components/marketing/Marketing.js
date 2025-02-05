@@ -110,7 +110,7 @@ const Marketing = () => {
                         <div className="logo_box item hidden fade-item">
                             <ul>
                                 <li><img src="/imgs/marketings/gravity.png" alt=""></img></li>
-                                <li><img src="/imgs/marketings/hyatt.svg" alt=""></img></li>
+                                <li><img src="/imgs/marketings/hyatt.png" alt=""></img></li>
                                 <li><img src="/imgs/marketings/tada.png" alt=""></img></li>
                             </ul>
                             <ul>

@@ -82,7 +82,7 @@
 #b2b_marketing .section4_con > p {color:#7d7773;font-size:22px;font-style:italic;font-weight:400;letter-spacing:-0.887px;opacity:0.5;margin-bottom:18px;font-family: 'Poppins', sans-serif;}
 #b2b_marketing .section4_con > h3 {color:#000;font-size:30px;font-weight:400;letter-spacing:-0.6px;margin-bottom:61px;}
 #b2b_marketing .section4_con > h3 span {font-weight:600;}
-#b2b_marketing .section4_con .logo_box ul {display:flex;justify-content: center;align-items: center;margin-bottom:50px;}
+#b2b_marketing .section4_con .logo_box ul {display:flex;justify-content: center;align-items: center;margin-bottom:50px;gap:30px;}
 #b2b_marketing .section4_con .logo_box ul:last-child {margin-bottom:0;}
 #b2b_marketing .section4_con .logo_box ul li {flex:1;}
 
