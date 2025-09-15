@@ -94,15 +94,15 @@ const Gift = () => {
               </div>
               <div className="img_box item hidden fade-item">
                 <img
-                  src="/imgs/gifts/v3_main.png"
+                  src="/imgs/gifts/leg3.png"
                   alt="풀리오 B2B 대표 제품"
                 ></img>
                 <img
-                  src="/imgs/gifts/matt_main.png"
+                  src="/imgs/gifts/newmat.png"
                   alt="풀리오 B2B 대표 제품"
                 ></img>
                 <img
-                  src="/imgs/gifts/v2_main.png"
+                  src="/imgs/gifts/neck3.png"
                   alt="풀리오 B2B 대표 제품"
                 ></img>
                 <span className="circle">
