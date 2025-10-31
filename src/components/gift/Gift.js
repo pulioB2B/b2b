@@ -113,10 +113,7 @@ const Gift = () => {
             </div>
           </div>
           <button type="button" className="main_btn item hidden">
-            <Link
-              to="https://puliob2bsales.recatch.cc/workflows/daboqndouz"
-              target="_blank"
-            >
+            <Link to="https://www.pluuug.com/form/vBnigmtV6M" target="_blank">
               단체선물 <span>1분만에 상담받기</span>
             </Link>
             <div className="poi"></div>
