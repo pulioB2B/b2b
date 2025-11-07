@@ -77,7 +77,7 @@ const Gift = () => {
                 }}
               >
                 <source
-                  src="https://player-api.charlla.io/mp4/HSzSgFSivHX#t=0.001"
+                  src="https://xwfdduxa11509.edge.naverncp.com/b2b/b2b_main.mp4"
                   type="video/mp4"
                 />
               </video>
