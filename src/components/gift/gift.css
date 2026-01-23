@@ -825,6 +825,7 @@
     font-size: 28px;
     line-height: 36px;
     letter-spacing: -0.56px;
+    letter-spacing: -0.56px;
   }
   #b2b_gift .section1_con .img_box img:nth-child(1) {
     transform: translate(15%, -3%) scale(0.6);
