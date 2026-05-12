@@ -3,14 +3,9 @@ import { Link } from "react-router-dom";
 import "./gift.css";
 import PcImgSlider from "../common/PcImgSlider";
 import LogoSlider from "../common/LogoSlider";
-import ChannelService from "../../ChannelService";
 
 const Gift = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 850);
-
-  ChannelService.loadScript();
-
-  ChannelService.boot({ pluginKey: "8cb29144-553f-46f5-99ae-9520276b248c" });
 
   useEffect(() => {
     const handleResize = () => {
@@ -46,7 +41,7 @@ const Gift = () => {
           }
         });
       },
-      { threshold: 0.5 } // 요소가 10% 보이면 트리거
+      { threshold: 0.5 }, // 요소가 10% 보이면 트리거
     );
 
     items.forEach((item) => newObserver.observe(item));
