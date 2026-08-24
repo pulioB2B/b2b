@@ -132,7 +132,7 @@ const Gift = () => {
             <li className="item hidden fade-item">
               {isMobile && <h4>기업 EVENT</h4>}
               <div>
-                <img src="/imgs/gifts/section2_1.jpg" alt=""></img>
+                <img src="/imgs/gifts/section2_1_1.png" alt=""></img>
               </div>
               {!isMobile && <h4>기업 EVENT</h4>}
               <p>
